@@ -1,0 +1,50 @@
+<div style="background-image:url('./assests/images/lion_bg.png'); background-repeat:no-repeat; background-size: cover; height:100vh;  margin-top:-20px;">
+    <div class="row">
+        <nav class="navbar" style="background-color:rgba(207, 241, 14, 1); height:100px;">
+            <div class="navbarText">
+                <h3><b>Drag the steps from the left and drop them in the correct sequence on the pages of the flipbook in the centre.</b></h3>
+                <p>Hit Play to see your flipbook in action when you're done!</p>
+            </div>
+        </nav>
+    </div>
+    <div class="row" style="margin-top:10px; margin-left:10px;">
+        <div class="col-lg-3">
+
+        </div>
+        <div class="col-lg-6 text-center" style="margin-top:10px;">
+
+            <div class="row" style=" height:450px; width:800px; margin-left:100px;">
+
+                <div id="animate1"  ng-click="clicked()" class="mybook">
+                    <img class="lionMoves" src="./assests/images/move1.png"  alt="Dance"  />
+                </div>
+                <div  id="animate2" class="mybook">
+                  <img class="lionMoves" src="./assests/images/move2.png"  alt="Dance"  />
+                </div>
+                <div  id="animate3" class="mybook">
+                  <img class="lionMoves" src="./assests/images/move3.png"  alt="Dance"  />
+                    </div>
+
+                <div  id="animate4" class="mybook">
+                  <img class="lionMoves" src="./assests/images/move4.png"  alt="Dance"  />
+                </div>
+                <div  id="animate5" class="mybook">
+                    <img class="lionMoves" src="./assests/images/move5.png"  alt="Dance"  />
+                  </div>
+                <div id="animate6" class="mybook">
+                  <img class="lionMoves" src="./assests/images/move6.png" alt="Dance"  />
+                </div>
+          </div>
+
+
+            <div class="row" style="margin-top:20px;">
+                <a href="#"><img src="./assests/images/play.png" id="playButton" alt="play button" /></a>
+            </div>
+            <div class="row" style="margin-top:40px;">
+                <button id="back_button" type="button" name="button" ui-sref="stepShown">BACK</button>
+                <button id="next_button" type="button" name="button" ui-sref="fulldance">NEXT</button>
+            </div>
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+</div>

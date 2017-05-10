@@ -1,0 +1,1010 @@
+﻿a {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+#feedbackMinWidth 
+{
+	min-width: 240px;
+}
+
+#refreshFeedbackDiv
+{
+	float: right;
+	padding: 10px 10px 0px 10px;
+}
+
+a.commenterRenameLink {
+    color: #006699;
+}
+
+#feedbackNewIssue img.topicLoading {
+	float: left;
+    margin-left: 10px;
+}
+
+#feedbackNewIssue div.charsLeft {
+    margin-bottom: 3px;
+    margin-left: 10px;
+    font-size: xx-small;
+}
+
+/*div.feedbackItem {
+    margin: 10px 0px 10px 0px;
+    border-bottom: 1px solid #FFF;
+}*/
+
+div.topicSubHeader 
+{
+	padding-top: 2px;
+	font-size: .9em;
+	color: #666;
+}
+
+span.topicCreator 
+{
+	color: #000;
+}
+
+div.topicExpandContainer 
+{
+	padding-top: 3px;
+}
+
+a.expandIssueLink 
+{
+	color: #069;
+}
+
+a.collapseIssueLink 
+{
+	color: #069;
+}
+
+/*div.feedbackItem_header {
+    margin-bottom: 5px;
+}*/
+
+/*div.feedbackItem_commenter {
+    display:inline;
+    color: #F60;
+    font-weight:bold;
+}*/
+
+/*div.feedbackItem_commentDate {
+    display: inline;
+    color: #666;
+    padding-left: 5px;
+}*/
+
+/*div.feedbackItem_commentText {
+    margin: 5px 0px 5px 0px;
+    color: #333;
+    line-height: 1.2em;
+}*/
+
+div.feedbackItem_commentLastModified {
+    color: #333;
+    text-align: right;
+    font-style: italic;
+    font-size: .75em;
+    padding: 0px 5px 10px 0px;
+}
+
+div.feedbackDeleteItem {
+    color: #FF0000;
+}
+
+div.feedbackDeleteConfirm 
+{
+    margin: 5px 0px 5px 0px;
+}
+
+div.feedbackItem_links, div.feedbackDeleteItemLinks {
+    text-align: right;
+    padding-bottom: 10px;
+}
+
+div.feedbackItem_links a, div.feedbackDeleteItemLinks a {
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #006699;
+}
+
+a.awesomeButton {
+    background: #138CDD;
+    display: inline-block;
+    padding: 3px 10px 4px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 1;
+    /*box-shadow: 0 1px 3px #999;*/
+    /*text-shadow: 0 -1px 1px #222;*/
+    /*border-bottom: 1px solid #222;*/
+    cursor: pointer;
+    position: static;
+    border-radius: 3px;
+}
+
+a.awesomeButton:hover {
+    background: #3b8fc0;
+}
+
+a.feedbackIssueNewCommentLink {
+    padding: 3px 15px 4px;
+    margin: 0px 5px 5px 0px;
+}
+
+div.editIssueLinks {
+    text-align: right;
+}
+
+/*div.feedbackIssue div.feedbackEntryItemLinks a {
+    margin: 5px 5px 5px 5px;
+}*/
+
+a.feedbackEntryItemCancel {
+    color: #006699;
+}
+
+a.feedbackEntryItemScreenshot {
+    color: #006699;
+}
+
+.commenterSetNameDialog, .feedbackAuthDialog {
+    border: solid 1px #AAA;
+    width: 190px;
+    background:white;
+    display:none;
+    position: absolute;
+    padding:13px;
+    /*border-radius:5px;*/
+    z-index:101;
+}
+
+.feedbackAuthDialog {
+    font-size: 0.75em;
+}
+
+/* Screenshot Feature Styling */
+
+img.screenshotGenerating {
+    float: left;
+    margin-top: 6px;
+    margin-left: 4px;
+}
+
+#screenshotPanel {
+    cursor: url('images/crosshair.cur') 8 8, auto;
+}
+
+.screenshotOverlay {
+    position: absolute;
+}
+
+.blackoutOverlay {
+    position: absolute;
+    background-color: #000000;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.blackoutTextOverlay {
+    position: absolute;
+    pointer-events: none;
+    color: #EEE;
+    padding: 2px;
+    font-size: 56px;
+    text-align: center;
+}
+
+
+div.feedbackItem_thumbnailImg {
+    text-align: center;
+    /*height: 130px;*/
+}
+
+div.feedbackItem_deleteDiv {
+    right: 1px;
+    position: absolute;
+}
+
+img.deleteIcon {
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+}
+
+img.fullsizeImg {
+    display: none;
+}
+
+
+div#previewPanel {
+    position: absolute;
+}
+
+.blackoutPreviewOverlay {
+    position: absolute;
+    background-color: #000000;
+    filter: alpha(opacity=85);
+    opacity: 0.85;
+    pointer-events: none;
+}
+
+img.previewImg {
+    position: absolute;
+    max-width: 90%;
+}
+
+img.previewCloseIcon {
+    position: absolute;
+    cursor: pointer;
+}
+
+h3 {
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	font-family: nexa_lightregular, Arial;
+	font-size: 25px;
+	color: #000000;
+	font-weight: normal;
+}
+
+.dialogDiv {
+    border: solid 1px #AAA;
+    width: 190px;
+    background:white;
+    position: absolute;
+    padding: 5px;
+    z-index:101;
+    text-align: center;
+}
+
+div#browserMsg {
+    text-align: center;
+    margin-top: 50px;
+    padding: 10px;
+    color: #666; 
+}
+
+
+/* Version 8.0 Reskin 
+-------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+
+.feedbackEntryItem {
+    /*display: inline-block;*/
+    width: 100%;
+}
+
+#feedbackScrollContainer {
+    overflow: auto;
+    width: 100%;
+    /*height: 100%;*/
+    -webkit-overflow-scrolling: touch;
+}
+
+.issueComments {
+    display: inline-block;
+    width: 100%;
+}
+
+.topicDescription {
+    text-align: left;
+}
+
+/* Feedback Host Header Section -------------------------------------------------------------------------- */
+
+#feedbackHost {
+    font-size: 12px;
+    color: #333;
+    height: 100%;
+
+    min-width: 240px;
+    /*overflow: auto;*/
+    /*overflow-y: hidden;*/
+    /*-ms-overflow-y: hidden;*/
+    /*white-space: nowrap;*/
+    /*overflow-y: scroll;*/
+    /*overflow: scroll;*/
+
+    font-family: 'Trebuchet MS';
+}
+
+#feedbackHost::-webkit-scrollbar {
+    display: none;
+}
+
+#feedbackHostBtn a {
+    background: url('images/discuss_off.png');
+    background: url('images/discuss_off.svg'),linear-gradient(transparent, transparent);
+}
+
+.hashover #feedbackHostBtn a:hover {
+    background: url('images/discuss_hover.png');
+    background: url('images/discuss_hover.svg'),linear-gradient(transparent, transparent);
+}
+
+#feedbackHostBtn a.selected, #feedbackHostBtn a.selected:hover {
+    background: url('images/discuss_on.png');
+    background: url('images/discuss_on.svg'),linear-gradient(transparent, transparent);
+}
+
+.feedbackHeader {
+    padding-top: 27px;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.feedbackToolbar {
+    margin: 0px 5px 15px 12px;
+}
+
+.pluginNameHeader {
+    font-size: 12px;
+    white-space: nowrap;
+    margin-bottom: 5px;
+}
+
+.pageNameHeader {
+    font-size: 15px;
+    font-weight: bold;
+    padding-right: 77px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.pageButtonHeader {
+    float: right;
+    position: relative;
+	height: 24px;
+    top: -20px;
+    margin-bottom: -24px;
+}
+
+.feedbackToolbarButton {
+    float: left;
+    width: 22px;
+    height: 22px;
+    border: 1px solid transparent;
+}
+
+#feedbackButtonBack {
+    background: url('images/back.png') no-repeat center center;
+    background: url('images/back.svg') no-repeat center center, linear-gradient(transparent, transparent);
+}
+
+#feedbackButtonBack:hover {
+    background: url('images/back_hover.png') no-repeat center center;
+    background: url('images/back_hover.svg') no-repeat center center, linear-gradient(transparent, transparent);
+}
+
+#feedbackButtonForward {
+    background: url('images/forward.png') no-repeat center center;
+    background: url('images/forward.svg') no-repeat center center, linear-gradient(transparent, transparent);
+}
+
+#feedbackButtonForward:hover {
+    background: url('images/forward_hover.png') no-repeat center center;
+    background: url('images/forward_hover.svg') no-repeat center center, linear-gradient(transparent, transparent);
+}
+
+.staticRefreshButton {
+    background: url('images/refresh.png') no-repeat center center;
+    background: url('images/refresh.svg') no-repeat center center, linear-gradient(transparent, transparent);
+}
+
+.staticRefreshButton:hover {
+    background: url('images/refresh_hover.png') no-repeat center center;
+    background: url('images/refresh_hover.svg') no-repeat center center, linear-gradient(transparent, transparent);
+}
+
+.spinningRefreshButton {
+    background: url('images/refresh_animate.gif') no-repeat center center;
+    background-size: 18px 18px;
+}
+
+/* Feedback New Issue Section ---------------------------------------------------------------------------- */
+
+#feedbackNewIssueContainer {
+    padding: 10px 12px 10px 12px;
+    border-bottom: 1px solid #b1b3b5;
+}
+
+#feedbackNewIssueEntry {
+    height: 24px;
+    background-color: white;
+}
+
+#commenterRenameContainer {
+    padding-bottom: 10px;
+    font-size: 12px;
+}
+
+.feedbackEntryTextBoxContainer {
+    border: 1px solid #D9D9D9;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+
+.inputHintOverlay {
+    background-color: transparent;
+    padding-right: 26px;
+
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.feedbackEntryTextBox, .feedbackEntryTextBox:focus {
+    border: 0;
+    outline-width: 0;
+    background-color: transparent;
+    padding-right: 26px;
+    padding-left: 4px;
+    width: 100%;
+
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* NOTE: The use of ':after' is to fix an issue with Firefox */
+.screenshotIssueIcon, .screenshotCommentIcon, 
+.screenshotIssueIcon:after, .screenshotCommentIcon:after {
+    content: url('images/camera.png');
+    content: url('images/camera.svg');
+}
+
+/* NOTE: The use of ':after' is to fix an issue with Firefox */
+.screenshotIssueIcon:hover, .screenshotCommentIcon:hover, 
+.screenshotIssueIcon:hover:after, .screenshotCommentIcon:hover:after {
+    content: url('images/camera_hover.png');
+    content: url('images/camera_hover.svg');
+}
+
+.screenshotIssueIcon, .screenshotIssueIcon:hover, .textBoxSpinner {
+    background-color: transparent;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 5px;
+    margin-right: 4px;
+    cursor: pointer;
+}
+
+/* NOTE: The use of ':after' is to fix an issue with Firefox */
+.textBoxSpinner, .commentTextBoxSpinner, 
+.textBoxSpinner:after, .commentTextBoxSpinner:after {
+    content: url('images/spinner.gif');
+
+    cursor: default;
+    margin-top: 3px;
+    width: 18px;
+    height: 18px;
+}
+
+.commentTextBoxSpinner {
+    margin-top: -4px;
+    margin-right: 4px;
+}
+
+div.feedbackEntryItemLinks {
+    text-align: right;
+    padding-top: 10px;
+    /*padding-bottom: 10px;*/
+    margin-bottom: 10px;
+}
+
+a.feedbackEntryItemSave {
+    padding: 4px 16px 3px;
+    font-size: 10px;
+}
+
+.watermark {
+    color: #8F949A !important;
+    opacity: 1 !important;
+}
+
+.redWatermark {
+    color: #DB3434;
+    /*opacity: 1 !important;*/
+}
+
+/* Commenter Name Dialog Section */
+
+.commenterSetNameContinueAnon {
+    color: #0a6cd6;
+}
+
+#commenterSetNameTextBox {
+    float: left;
+    width: 70%; 
+    /*margin-top: 1px;*/
+}
+
+#commenterSetNameSubmitButton {
+    float: right;
+    width: 25%;
+
+    background: #0A6CD6;
+    display: inline-block;
+    padding: 3px 10px 4px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 1;
+    cursor: pointer;
+    border-radius: 3px;
+    border-style: none;
+    /*margin-top: 1px;*/
+}
+
+#renamePopupTextbox {
+    width: 118px;
+}
+
+#renamePopupSubmit {
+    float: right;
+    margin-right: 2px;
+    margin-top: 6px;
+
+    background: #0A6CD6;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    font-size: 12px;
+    padding: 3px 10px 3px;
+}
+
+/* Saved Topic Section */
+
+.feedbackIssue {
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-bottom: 10px;
+    /*padding-bottom: 10px;*/
+    border-bottom: 1px solid #b1b3b5;
+    text-align: right;
+}
+
+.topicHeader {
+    display: inline-block;
+    width: 100%;
+    line-height: 24px;
+	padding: 5px 0px 5px 0px;
+}
+
+.initialBubble {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #62666B;
+    float: left;
+
+    line-height: 24px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFFFFF;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.topicCreator {
+    font-size: 14px;
+    font-weight: bold;
+    color: #484444;
+    padding-left: 6px;
+    float: left;
+
+    max-width: 40%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.relativeCreatedDate {
+    font-size: 11px;
+    color: #B1B3B5;
+    float: right;
+
+    max-width: 45%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+    /*direction: rtl;*/
+}
+
+.topicDescription {
+    font-size: 12px;
+    line-height: 20px;
+    color: #4A4A4A;
+    padding-bottom: 5px;
+}
+
+.topicFooter {
+    display: inline-block;
+    width: 100%;
+    padding: 5px 0px 5px 0px;
+    line-height: 20px;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.topicOptions {
+    line-height: 20px;
+    font-size: 16px;
+    float: left;
+    color: #8F949A;
+    cursor: pointer;
+}
+
+.showRepliesButton {
+    /*line-height: 20px;*/
+    float: right;
+    font-size: 10px;
+    font-weight: bold;
+    color: #4a4a4a;
+    /*border: 1px solid #b1b3b5;*/
+    padding-left: 4px;
+    padding-right: 4px;
+    cursor: pointer;
+}
+
+.hideRepliesButton {
+    line-height: 20px;
+    font-size: 10px;
+    font-weight: bold;
+    float: right;
+    color: #4a4a4a;
+    display: none;
+    cursor: pointer;
+}
+
+.replyToggleButton {
+    float: right;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 20px;
+}
+
+.toggleOff {
+    color: #4a4a4a;
+}
+
+.toggleOn {
+    color: #0a6cd6;
+}
+
+.replySubmitButton {
+    /*line-height: 20px;*/
+    float: right;
+    text-align: center;
+    font-size: 10px;
+    padding: 4px 16px 3px !important;
+}
+
+.issueReplyInCommentsDiv {
+    text-align: right;
+    padding-bottom: 10px;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+/* New Comment Secion */
+
+.feedbackEntryTextAreaContainer {
+    text-align: right;
+    background: white;
+    border: 1px solid #D9D9D9;
+
+    width: 185px;
+    float: right;
+    margin-bottom: 10px;
+}
+
+.feedbackEntryTextArea{
+    float: right;
+    resize: none;
+    /*overflow-y: scroll;*/
+    /*overflow-x: hidden;*/
+    overflow: auto;
+    border: none;
+    outline-width: 0;
+
+    width: 98.5%;
+    background: transparent;
+    background-color: transparent;
+    /*margin-bottom: 10px;*/
+}
+
+.feedbackEntryTextArea::-webkit-scrollbar {
+    display: none;
+}
+
+.screenshotCommentIcon, .screenshotCommentIcon:hover {
+    background-color: transparent;
+    cursor: pointer;
+
+    /*float: right;*/
+    margin-right: 4px;
+}
+
+div.feedbackItem {
+    /*margin: 10px 0px 10px 0px;*/
+    /*border-bottom: 1px solid #FFF;*/
+    margin-top: 20px;
+    padding-left: 30px;
+}
+
+div.feedbackItem_header {
+    display: inline-block;
+    width: 100%;
+    line-height: 24px;
+    padding: 5px 0px 5px 0px;
+}
+
+div.feedbackItem_commenter {
+    /*display:inline;*/
+    /*color: #F60;*/
+    /*font-weight:bold;*/
+
+    font-size: 14px;
+    font-weight: bold;
+    color: #484444;
+    float: left;
+    padding-left: 6px;
+
+    max-width: 40%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+div.feedbackItem_commentDate {
+    /*display: inline;*/
+    /*color: #666;*/
+    /*padding-left: 5px;*/
+
+    font-size: 11px;
+    color: #B1B3B5;
+    float: right;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /*direction: rtl;*/
+    /*text-align: left;*/
+    max-width: 40%;
+}
+
+div.feedbackItem_commentText {
+    font-size: 12px;
+    line-height: 20px;
+    color: #4A4A4A;
+    padding-bottom: 5px;
+    text-align: left;
+}
+
+div.feedbackItem_footer {
+    display: inline-block;
+    width: 100%;
+    padding: 5px 0px 5px 0px;
+    line-height: 20px;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+div.addingCommentOverlay {
+    z-index: 10;
+    position: relative;
+    background: #f5f5f5;
+    opacity: 0.35;
+    margin-left: 29px;
+}
+
+/* NOTE: The use of ':after' is to fix an issue with Firefox */
+img.addingCommentSpinner, img.deleteItemSpinner, 
+img.addingCommentSpinner:after, img.deleteItemSpinner:after {
+    content: url('images/spinner.gif');
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+/* Delete Issue/Comments */
+
+div.deleteItemOverlay {
+    z-index: 10;
+    position: relative;
+    background: #f5f5f5;
+    opacity: 0.35;
+}
+
+/* Screenshots */
+
+img.thumbnailImg {
+    /*position: relative;*/
+    max-width: 90%;
+    max-height: 120px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*display: block;*/
+    /*margin: 0 auto;*/
+    cursor: zoom-in;
+    cursor: pointer;
+}
+
+div.feedbackItem_thumbnail {
+    position: relative;
+    /*padding: 10px 0px 10px 0px;*/
+    /*border-bottom: 1px solid #FFF;*/ 
+    /*background-color: #d7e0e7;*/
+    border: 1px solid #d9d9d9;
+    height: 140px;
+    margin-bottom: 10px;
+}
+
+div.feedbackItem_issueThumbnail {
+    position: relative;
+    border: 1px solid #d9d9d9;
+    height: 140px;
+    margin-bottom: 10px;
+}
+
+div.feedbackItem_commentThumbnail {
+    position: relative;
+    border: 1px solid #d9d9d9;
+    height: 140px;
+    /*margin-left: 30px;*/
+    margin-bottom: 10px;
+}
+
+div.preloadDiv {
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    position: absolute;
+    background: url('images/spinner.gif') no-repeat center center;
+    background-size: 40px 40px;
+    /*filter: alpha(opacity=75);*/
+    /*opacity: 0.75;*/
+}
+
+
+/* Speech Bubble */
+
+div.speech {
+    position: absolute;
+    width: 128px;
+    height: 60px;
+    text-align: center;
+    /*line-height: 100px;*/
+    background-color: #F5F5F5;
+    border: 2px solid #8F949A;
+    z-index: 2;
+
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 1px 1px 4px #888;
+    -mox-box-shadow: 1px 1px 4px #888;
+    box-shadow: 1px 1px 4px #888;
+
+    text-align: left;
+
+    display: none;
+}
+
+div.speech:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 5px;
+    top: 60px;
+    border: 9px solid;
+    border-color: #8F949A transparent transparent transparent;
+}
+
+div.speech:after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 10px;
+    top: 60px;
+    border: 4px solid;
+    border-color: #F5F5F5 transparent transparent transparent;
+}
+
+div.commenterRenamePopup {
+    width: 225px !important;
+    height: 60px !important;
+    top: 15px !important;
+    left: 70px !important;
+}
+
+div.commenterRenamePopup:before {
+    top: 60px !important;
+    left: 30px !important;
+}
+
+div.commenterRenamePopup:after {
+    top: 60px !important;
+    left: 35px !important;
+}
+
+div.renamePopupDiv {
+    padding: 5px; 
+}
+
+div.speechIssue {
+    height: 60px !important;
+}
+
+div.speechIssue:before {
+    top: 60px !important;
+}
+
+div.speechIssue:after {
+    top: 60px !important;
+}
+
+div.popupLinksDiv {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    text-align: left;
+    line-height: 20px;
+}
+
+a.popupLink {
+    color: #199DDA;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.issueDeleteLinkDiv {
+    line-height: 40px !important;
+}
+
+.commentDeleteConfirmDiv {
+    line-height: 21px !important;
+}
+
+.issueDeleteCancel, .commentDeleteCancel {
+    margin-right: 10px;
+}
+
+.issueDeleteConfirm, .commentDeleteConfirm {
+    background: #DB3434 !important;
+}

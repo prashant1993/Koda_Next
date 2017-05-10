@@ -1,0 +1,18 @@
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-md-offset-3">
+    <h4 id="loginData">Please enter your name </h4>
+    <form name="reg">
+        <div class="form-group"  ng-class="{ 'has-error' : reg.firstName.$invalid }">
+            <label for="firstName">First Name</label>
+            <input type="text" ng-model="firstName" name="firstName" id="firstName" class="form-control"  required />
+ <p ng-show="reg.firstName.$invalid" class="help-block">You name is required.</p>
+        </div>
+        <div class="form-group"  ng-class="{ 'has-error' : reg.lastName.$invalid }">
+            <label for="lastName">Last Name</label>
+            <input type="text" ng-model="lastName" name="lastName" id="lastName" class="form-control"  required />
+ <p ng-show="reg.lastName.$invalid" class="help-block">You name is required.</p>
+        </div>
+        <div class="form-actions">
+            <button type="submit"  id="formButton" ng-click="submit()" ng-disabled="reg.$invalid">Let's Begin!</button>
+        </div>
+    </form>
+</div>

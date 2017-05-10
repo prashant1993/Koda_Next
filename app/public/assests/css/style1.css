@@ -1,0 +1,94 @@
+.right-content{
+    height:120px;
+    border-radius: 5px;
+    border:1px solid #cccccc;
+    background-color: #cccccc;
+  }
+  .left-content{
+    height:120px;
+    border-radius: 5px;
+    border:1px solid #cccccc;
+    background-color: #cccccc;
+  }
+  .mid-content{
+    height:120px;
+    width:auto;
+    border-radius: 5px;
+    border:1px solid #ccff33;
+    background-color: #ccff33;
+  }
+    
+    .block-content{
+      height:700px;
+      width:100%;
+    }
+    .workspace-content{
+      width: 100%;
+      height: 700px;
+    }
+    .actual-content{
+      width:100%;
+      height:700px;
+      border:1px solid grey;
+      background-color: white;
+    }
+
+    #actionButton1,#actionButton3{
+      background-color: white;
+      text-align:center;
+      height:80px;
+      width:150px;
+      border-radius: 5px;
+      color: black;
+      border:none;
+      margin-right: 20px;
+      margin-left: 40px;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    #actionButton2{
+      margin-left: 25px;
+    }
+    .progress{
+      margin-top: 2px;
+    }
+    .progress-bar{
+      border: 1px solid white;
+      background-color: lightgreen;
+    }
+    #topbar1,#topbar2,#topbar3{
+      height:75px;
+      width:75px;
+      border-radius: 5px;
+      margin-left: 40px;
+      margin-right:20px;
+    }
+    #thumb{
+      height:75px;
+      width:75px;
+      margin-top: 20px;
+      background:2px solid black;
+      border-radius: 5px;
+      margin-left: 20px;
+    }
+    #workspace{
+      margin-left: 2px;
+    }
+    #giraffe{
+      height:450px;
+      width: 400px;
+      margin-left: 20px;
+    }
+    #chat{
+      height:250px;
+      width:350px;
+      margin-left: 20px;
+    }
+    #step1,#step2,#step3,#step4,#step5,#step6{
+      margin-top: 20px;
+      margin-left: 20px;
+      display: none;
+    }
+    h3{
+      text-align: center;
+    }

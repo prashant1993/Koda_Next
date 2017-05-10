@@ -1,0 +1,159 @@
+#pageNotesHost {
+    font-size: 12px;
+    color:#4a4a4a;
+    height: 100%;
+}
+
+#pageNotesHostBtn a {
+    background: url('http://d2t44wh9rnwl5y.cloudfront.net/gsc/1HVGE2/34/93/dd/3493dd85639b48c79263ea965d5b1d11/plugins/page_notes/styles/images/notes_on.png?token=da302c475f7e56c4cade4ddcd5cd7b88');
+    background: url('http://dxlfb468n8ekd.cloudfront.net/gsc/1HVGE2/34/93/dd/3493dd85639b48c79263ea965d5b1d11/plugins/page_notes/styles/images/notes_on.svg?token=81e9f0c43114f2d4abeb9fdc98ed1372'),linear-gradient(transparent, transparent);
+}
+
+.hashover #pageNotesHostBtn a:hover {
+    background: url('http://dxlfb468n8ekd.cloudfront.net/gsc/1HVGE2/34/93/dd/3493dd85639b48c79263ea965d5b1d11/plugins/page_notes/styles/images/notes_hover.png?token=40aa26197a901fa85d61a6a7615c84a3');
+    background: url('http://d26uhratvi024l.cloudfront.net/gsc/1HVGE2/34/93/dd/3493dd85639b48c79263ea965d5b1d11/plugins/page_notes/styles/images/notes_hover.svg?token=dda81e9eee435c3b93e053c0986182d0'),linear-gradient(transparent, transparent);
+}
+
+#pageNotesHostBtn a.selected, #pageNotesHostBtn a.selected:hover {
+    background: url('http://dxlfb468n8ekd.cloudfront.net/gsc/1HVGE2/34/93/dd/3493dd85639b48c79263ea965d5b1d11/plugins/page_notes/styles/images/notes_off.png?token=0ad351aed4a9bc8a43168ebfaea433d8');
+    background: url('http://dxlfb468n8ekd.cloudfront.net/gsc/1HVGE2/34/93/dd/3493dd85639b48c79263ea965d5b1d11/plugins/page_notes/styles/images/notes_off.svg?token=047dfe7b725e9a3ddc1c1ee5852aca76'),linear-gradient(transparent, transparent);
+}
+
+#footnotesButton {
+    background: url('http://d26uhratvi024l.cloudfront.net/gsc/1HVGE2/34/93/dd/3493dd85639b48c79263ea965d5b1d11/plugins/page_notes/styles/images/footnotes.png?token=4406ae23808f0b75ec502fb72003a984') no-repeat center center;
+    background: url('http://d26uhratvi024l.cloudfront.net/gsc/1HVGE2/34/93/dd/3493dd85639b48c79263ea965d5b1d11/plugins/page_notes/styles/images/footnotes.svg?token=0be865b3daab1a4c8fae575567d5143d') no-repeat center center,linear-gradient(transparent, transparent);
+}
+
+#footnotesButton:hover {
+    background: url('http://d2v8ggac1o0f6z.cloudfront.net/gsc/1HVGE2/34/93/dd/3493dd85639b48c79263ea965d5b1d11/plugins/page_notes/styles/images/footnotes_hover.png?token=67d0306e1ff1cdeacda33e9841d93181') no-repeat center center;
+    background: url('http://d2v8ggac1o0f6z.cloudfront.net/gsc/1HVGE2/34/93/dd/3493dd85639b48c79263ea965d5b1d11/plugins/page_notes/styles/images/footnotes_hover.svg?token=9f4ee31c79b39584385d92c5ee8d7e91') no-repeat center center,linear-gradient(transparent, transparent);
+}
+
+#footnotesButton.sitemapToolbarButtonSelected, #footnotesButton.sitemapToolbarButtonSelected:hover {
+    background: url('http://d2t44wh9rnwl5y.cloudfront.net/gsc/1HVGE2/34/93/dd/3493dd85639b48c79263ea965d5b1d11/plugins/page_notes/styles/images/footnotes_on.png?token=7ab140b7c8ec6974b967f1223550715c') no-repeat center center;
+    background: url('http://d26uhratvi024l.cloudfront.net/gsc/1HVGE2/34/93/dd/3493dd85639b48c79263ea965d5b1d11/plugins/page_notes/styles/images/footnotes_on.svg?token=0a4fb867091d9fb692ebd42991949be8') no-repeat center center,linear-gradient(transparent, transparent);
+}
+
+.nextPageButton {
+    background: url('http://d2t44wh9rnwl5y.cloudfront.net/gsc/1HVGE2/34/93/dd/3493dd85639b48c79263ea965d5b1d11/plugins/page_notes/styles/images/forward.png?token=39a29e6a5937981745cb94a69c80ee87') no-repeat center center;
+    background: url('http://d2t44wh9rnwl5y.cloudfront.net/gsc/1HVGE2/34/93/dd/3493dd85639b48c79263ea965d5b1d11/plugins/page_notes/styles/images/forward.svg?token=623cef3a253275fa09f4566410e47026') no-repeat center center,linear-gradient(transparent, transparent);    
+}
+
+.nextPageButton:hover {
+    background: url('http://dxlfb468n8ekd.cloudfront.net/gsc/1HVGE2/34/93/dd/3493dd85639b48c79263ea965d5b1d11/plugins/page_notes/styles/images/forward_hover.png?token=9d6787cabb54165a328453a7e9f7ede5') no-repeat center center;
+    background: url('http://d26uhratvi024l.cloudfront.net/gsc/1HVGE2/34/93/dd/3493dd85639b48c79263ea965d5b1d11/plugins/page_notes/styles/images/forward_hover.svg?token=5253acb527f97cf91288e74f591904aa') no-repeat center center,linear-gradient(transparent, transparent);    
+}
+
+.prevPageButton {
+    background: url('http://d26uhratvi024l.cloudfront.net/gsc/1HVGE2/34/93/dd/3493dd85639b48c79263ea965d5b1d11/plugins/page_notes/styles/images/back.png?token=63947e3d669bec6ad83bcf07de082c2a') no-repeat center center;
+    background: url('http://d2v8ggac1o0f6z.cloudfront.net/gsc/1HVGE2/34/93/dd/3493dd85639b48c79263ea965d5b1d11/plugins/page_notes/styles/images/back.svg?token=b8a9a49143d0291556176e0a41e89728') no-repeat center center,linear-gradient(transparent, transparent);    
+}
+
+.prevPageButton:hover {
+    background: url('http://d2v8ggac1o0f6z.cloudfront.net/gsc/1HVGE2/34/93/dd/3493dd85639b48c79263ea965d5b1d11/plugins/page_notes/styles/images/back_hover.png?token=995425b98abc42e07593dc974dedfcf3') no-repeat center center;
+    background: url('http://dxlfb468n8ekd.cloudfront.net/gsc/1HVGE2/34/93/dd/3493dd85639b48c79263ea965d5b1d11/plugins/page_notes/styles/images/back_hover.svg?token=dd9bd0316d53f2b88f2cdb1c22468586') no-repeat center center,linear-gradient(transparent, transparent);    
+}
+
+#pageNotesScrollContainer 
+{
+    overflow: auto;
+    width: 100%;
+    /*height: 100%;*/
+    -webkit-overflow-scrolling: touch;
+}    
+
+#pageNotesContainer 
+{
+    /*padding: 10px 10px 10px 12px;*/
+}
+
+#pageNotesContent 
+{
+	overflow: visible;
+}
+
+.pageNoteContainer 
+{
+    padding: 10px;
+}
+
+.pageNoteName 
+{
+    font-family: 'Trebuchet MS';
+	font-size: 14px;
+    font-weight: bold;
+	margin-bottom: 5px;
+	/*text-decoration: underline;*/
+	white-space: nowrap;
+}
+
+.pageNote 
+{
+    line-height: 21px;
+	/*margin-bottom: 20px;*/
+}
+
+.widgetNoteContainer {
+    padding: 10px;
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+    cursor: pointer;
+}
+
+.widgetNoteContainerSelected {
+    background-color: white;
+    border-bottom: 1px solid #c2c2c2;
+    border-top: 1px solid #c2c2c2;
+}
+
+/*.widgetNoteContainer:hover {
+    background-color: white;
+    //border-bottom: 1px solid #c2c2c2;
+    //border-top: 1px solid #c2c2c2;
+}*/
+
+.widgetNoteFootnote {
+    display: inline-block;
+    /*vertical-align: top;
+    margin: 2px 5px 10px 0px;
+    padding: 1px 6px;
+    font-size: 10px;
+    color: #ffffff;
+    background-color: #0a6cd6;*/
+    width: 13px;
+    height: 12px;
+    padding-top: 1px;
+    text-align: center;
+    background-color: #138CDD;
+    /*-moz-box-shadow: 1px 1px 3px #aaa;
+    -webkit-box-shadow: 1px 1px 3px #aaa;
+    box-shadow: 1px 1px 3px #aaa;*/
+    font-size: 0px;
+    margin-right: 8px;
+}
+
+div.annnoteline {
+    display: inline-block;
+    width: 9px;
+    height: 1px;
+    border-bottom: 1px solid white;
+    margin-top: 1px;
+}
+
+.widgetNoteLabel {
+    display: inline-block;
+    vertical-align: top;
+    font-family: 'Trebuchet MS';
+	font-size: 14px;
+    font-weight: bold;
+	margin-bottom: 5px;    
+}
+
+.noteLink {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+.noteLink:hover {
+    background-color: white;
+}

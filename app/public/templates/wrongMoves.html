@@ -1,0 +1,105 @@
+<div class="row"  id="mainRow" style="background-image:url('./assests/images/lion_bg.png');">
+    <nav class="navbar" style="background-color:rgba(207, 241, 14, 1); height:100px;">
+      <div class="navbarText">
+<h3 style="font-family:Julee;font-weight:bold"><b>Drag the steps from the left and drop them in the correct sequence on the pages of the flipbook in the centre.</b></h3>
+<p style="font-family:Julee">Hit Play to see your flipbook in action when you're done!</p>
+      </div>
+  </nav>
+  <div class="row">
+<div class="col-lg-4">
+<div class="LionImagesBox">
+  <p id="lionBoxHeading">My Incorrect Sequence</p>
+  <div class="col-lg-4" style=" margin-top:-5px;">
+    <div class="lionImgBorder" ondrop="drop1(event)" ondragover="allowDrop(event)"><img class="lionMoves" src="./assests/images/move1.png" id="dance1" alt="Dance Step 1 image" draggable="true" ondragstart="drag(event)" /></div><br>
+    <div class="lionImgBorder" ondrop="drop1(event)" ondragover="allowDrop(event)"><img class="lionMoves" src="./assests/images/move2.png" id="dance2" alt="Dance Step 2 image" draggable="true" ondragstart="drag(event)" /></div><br>
+    <div class="lionImgBorder"ondrop="drop1(event)" ondragover="allowDrop(event)"><img class="lionMoves" src="./assests/images/move3.png" id="dance3" alt="Dance Step 3 image" draggable="true" ondragstart="drag(event)" /></div>
+  </div>
+  <div class="col-lg-4" style="margin-left:-5px; margin-top:-5px;">
+
+    <div class="lionImgBorder" ondrop="drop1(event)" ondragover="allowDrop(event)"><img class="lionMoves" src="./assests/images/move4.png" id="dance4" alt="Dance Step 1 image" draggable="true" ondragstart="drag(event)" /></div><br>
+    <div class="lionImgBorder" ondrop="drop1(event)" ondragover="allowDrop(event)"><img class="lionMoves" src="./assests/images/move5.png" id="dance5" alt="Dance Step 2 image" draggable="true" ondragstart="drag(event)" /></div><br>
+    <div class="lionImgBorder" ondrop="drop1(event)" ondragover="allowDrop(event)"><img class="lionMoves" src="./assests/images/move11.jpg" id="dance6" alt="Dance Step 3 image" draggable="true" ondragstart="drag(event)" /></div>
+  </div>
+  <div class="col-lg-4"style="margin-left:-5px; margin-top:-5px;">
+    <div class="lionImgBorder" ondrop="drop1(event)" ondragover="allowDrop(event)"><img class="lionMoves" src="./assests/images/move7.jpg" id="dance7" alt="Dance Step 1 image" draggable="true" ondragstart="drag(event)" /></div><br>
+    <div class="lionImgBorder" ondrop="drop1(event)" ondragover="allowDrop(event)"><img class="lionMoves" src="./assests/images/move8.jpg" id="dance8" alt="Dance Step 2 image" draggable="true" ondragstart="drag(event)" /></div><br>
+    <div class="lionImgBorder" ondrop="drop1(event)" ondragover="allowDrop(event)"><img class="lionMoves" src="./assests/images/move9.jpg" id="dance9" alt="Dance Step 3 image" draggable="true" ondragstart="drag(event)" /></div>
+
+  </div>
+</div>
+<img id="arrow" src="./assests/images/arrow.png" alt="">
+  <div class="col-lg-6" style="display:inline-block;">
+          <img id="video" style="height:40px; margin-left:90px; margin-top:20px;" src="./assests/images/video.png"  ng-click="toggleModal('Success')" alt="Dance Preview" />
+          </div>
+            <div class="col-lg-6"><img src="./assests/images/pointing.png" style="margin-left:-140px;"id="pointing" ng-hide="showModal==true" alt="Rightside Pointing image" /></div>
+            <modal visible="showModal"  >
+            <img style="height:100; width:150px; margin-left:50px; margin-top:-20px;" src="./assests/images/correct_dancing_lion.gif" onclick="this.src=this.src"></img>
+            </modal>
+</div>
+<div class="col-lg-8" >
+<div class="sequenceBox">
+  <div class="col-lg-4" >
+      <div class="subcards">
+          <div class="headers">Page 1</div>
+          <div class="drop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      </div>
+      <div class="subcards">
+  <div class="headers">Page 4</div>
+          <div class="drop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      </div>
+      <div class="subcards">
+<div class="headers">Page 7</div>
+          <div class="drop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+      </div>
+  </div>
+  <div class="col-lg-4">
+      <div class="subcards">
+          <div class="headers">
+              Page 2
+          </div>
+          <div class="drop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      </div>
+      <div class="subcards">
+  <div class="headers">Page 5</div>
+          <div class="drop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+      </div>
+      <div class="subcards">
+  <div class="headers">Page 8</div>
+          <div class="drop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+      </div>
+  </div>
+  <div class="col-lg-4" >
+      <div class="subcards">
+          <div class="headers">
+              Page 3
+          </div>
+          <div class="drop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      </div>
+      <div class="subcards">
+<div class="headers">Page 6</div>
+          <div class="drop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+      </div>
+      <div class="subcards">
+<div class="headers">Page 9</div>
+          <div class="drop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+      </div>
+  </div>
+</div>
+
+    <button id="back_button" style="bottom:15px; position:fixed; left:20px;" type="button" name="button" ui-sref="stepShown">BACK</button>
+    <a ui-sref="flipeffect">
+      <button id="next_button" style="width:180px; text-align:right; padding-right:30px; bottom:15px;  left:960px; position:fixed;" type="button" name="button" ui-sref="flipeffect">PLAY</button>
+
+      <img style="width:70px; margin-left:360px; bottom:18px; height:65px; position:fixed;" src="./assests/images/play.png" alt="">
+
+    </a>
+</div>
+
+  </div>
+
+</div>

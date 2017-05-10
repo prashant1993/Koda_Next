@@ -1,0 +1,39 @@
+{
+  "name": "koda",
+  "version": "1.0.0",
+  "description": "Code block based application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amitrsingh1992/koda.git"
+  },
+  "keywords": [
+    "koda",
+    "blocks"
+  ],
+  "author": "Amit R Singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amitrsingh1992/koda/issues"
+  },
+  "homepage": "https://github.com/amitrsingh1992/koda#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.17.1",
+    "cors": "^2.8.3",
+    "crypto": "0.0.3",
+    "express": "^4.15.2",
+    "mongoose": "^4.9.4",
+    "mongoose-schema-jsonschema": "^1.1.12",
+    "mongoose-unique-validator": "^1.0.5",
+    "mongoose-validate": "0.0.5",
+    "morgan": "^1.8.1",
+    "util": "^0.10.3"
+  }
+}

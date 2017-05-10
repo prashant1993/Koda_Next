@@ -1,0 +1,30 @@
+<div class="row" style="background-image:url('./assests/images/jungle_bg.jpg'); background-size:100% 100%; background-repeat:no-repeat; border:1px solid transparent; width:2000px; height:100vh; margin-top:-22px;">
+        <div class="homepage-message">
+           <!-- <img ng-src="./assests/images/homepage1.png" id="homepage-chat" alt="home page chat box" ng-hide="isClicked"> -->
+          <div ng-hide="isClicked">
+            <img ng-src="./assests/images/chat_bubble.png" id="homepage-chat" class="chatBox" alt="home page chat box"  >
+            <p id="textInChat" class="textHome">Hey, look! We have a <br> visitor!</p>
+          </div>
+          <div class="previousChat" ng-show="isClicked">
+            <img ng-src="./assests/images/chat_bubble.png" id="homepage-chat" class="chatBox" alt="home page chat box"  >
+            <p id="textInChat" class="textHome">Welcome to our carnival! <br> May I know your name?</p>
+          </div>
+          <!-- <img ng-src="./assests/images/chat_welcome1.png" id="homepage-chat" class="previousChat" alt="home page chat box" ng-show="isClicked"> -->
+          <div class="nextChat" style="display:none;">
+            <img ng-src="./assests/images/chat_bubble.png" id="homepage-chat" class="chatBox" alt="home page chat box"  >
+            <p id="textInChat" class="textHome">Hi, {{Data | capitalize}}! Can you help us <br> with the preparations for <br> the carnival?</p>
+          </div>
+        </div>
+        <div id="input_container"  style="display:none;">
+          <img id="leaf_img"  src="./assests/images/leaf.png" alt="" />
+    <input type="text" class="inputBox" ng-model="Name" name="firstName" id="Name" placeholder="Enter your name here" required />
+    <img src="./assests/images/arrow_button.png" id="input_img" ng-click="welcome()">
+    <img id="inputError" src="./assests/images/input_error.png" style="display:none;" alt="" />
+</div>
+
+        <div class="bottom">
+          <button id="welcome_button"  type="button" name="button" ng-click="clicked()" ng-hide="isClicked">SAY HELLO!</button>
+          <button id="welcome_button" style="  display:none;" class="button" type="button" name="button" ui-sref="helpLion"  ng-show="clicked">SURE!</button>
+        </div>
+
+    </div>

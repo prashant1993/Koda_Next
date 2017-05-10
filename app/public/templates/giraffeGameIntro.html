@@ -1,0 +1,26 @@
+<div class="img-responsive" style="background-image:url('./assests/images/backimg.png');  background-repeat:no-repeat; background-size:100%;  background-position:center;  height:100vh; margin-top:-20px;">
+<br>
+<div class="row">
+  <div class="col-lg-3">
+
+  </div>
+  <div class="col-lg-6">
+    <div class="row" style="margin-left:35%;">
+      <img ng-src="./assests/images/homepage3.png" id="lion-cave" alt="home page chat box"/>
+    </div>
+    <div class="row" style="margin-left:35%;">
+      <img ng-src="./assests/images/lionMascot.png" id="lionImg" alt="Lion Image" />
+    </div><br><br>
+    <div class="row" style="margin-left:35%;">
+      <input type="button" ui-sref="welcome" id="back_button" value="PREVIOUS" ui-sref="welcome" />
+      <input type="button"  id="continue_button" style="width:200px;" ng-click="isclicked = !isclicked" ng-hide="isclicked" value="LET'S DO IT!" />
+        <input type="button"  id="next_button" style="width:200px;" ng-show="isclicked" value="NEXT" />
+    </div>
+  </div>
+  <div class="col-lg-3">
+<img id="giffimg" src="./assests/images/giraffe.png" style="margin-top:300px;" ng-show="isclicked" alt="image">
+  </div>
+
+</div>
+
+    </div>

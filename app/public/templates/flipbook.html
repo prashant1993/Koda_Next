@@ -1,0 +1,25 @@
+<div class="row" id="mainRow" style="background-image:url('./assests/images/cave4.png'); ">
+
+    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+    <div class=" col-lg-7 col-md-7 col-sm-7 col-xs-7 text-center">
+        <div class="row">
+            <img id="rockImg" src="./assests/images/rock.jpg" alt="rock" /></div>
+        <div class="row" style="margin-top:-200px;">
+            <video id="flipbook" ng-hide="isclicked" width="320" height="240" autoplay>
+              <source src="./assests/images/flipbook_1.mp4" type="video/mp4">
+            </video>
+            <video id="flipbook" ng-show="isclicked" width="320" height="240" autoplay>
+              <source src="./assests/images/flipbook_2.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+        <div class="row" id="rowforChat"><img id="chat" src="./assests/images/flipbook_chat2.png" ng-show="isclicked" alt="chat" /></div>
+        <div class="row" id="rowforChat"><img id="chat" src="./assests/images/chat_flipbook1.png" ng-hide="isclicked" alt="chat" /></div>
+        <div class="row" id="rowforLion"> <img id="lionImg" src="./assests/images/lion_mascot.png" alt="lion" /></div>
+    </div>
+
+    <button id="back_button" style="bottom:15px; position:fixed; left:20px;" type="button" name="button" ui-sref="learndance">BACK</button>
+    <button id="next_button" class="button" style="bottom:15px;  left:960px; position:fixed;" type="button" name="button" ng-click="isclicked = !isclicked" ng-hide="isclicked">NEXT</button>
+    <button id="next_button" style="bottom:15px;  left:960px; position:fixed;" type="button" name="button" ng-show="isclicked" ui-sref="stepShown">NEXT</button>
+</div>

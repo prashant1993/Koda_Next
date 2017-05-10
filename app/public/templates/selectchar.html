@@ -1,0 +1,43 @@
+<div style="background-image:url('./assests/images/backimg.png'); background-repeat:no-repeat; background-size: cover; height:100vh; margin-top:-20px;">
+        <div class="row">
+
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div><img ng-drop="true" ng-drop-success="onDropCompleteInList($data,$event)" id="toolHolder" src="./assests/images/placeholder_tools.png" alt="toolholder" />
+                    <ul class="draggable-objects" ng-repeat="obj in listItems">
+                        <li>
+                            <div ng-drag="true" ng-drag-data="obj" data-allow-transform="true" ng-drag-success="onDragCompleteInList($data,$event)"> <img class="item" src={{obj.title}} alt=""> </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="row">
+                    <div class="Holder">
+                        <div class="row"  id="size" ng-drop="true" ng-drop-success="onDropCompleteInChar($data,$event)" >
+                            <img id="characterHolder" ng-drop="true" ng-drop-success="onDropCompleteInChar($data,$event)" src="./assests/images/characterHolder.png" alt="image"><br><br>
+                            <img id="droppedObjectsInChar" ng-repeat="obj in droppedObjectsInChar" ng-drag="true" ng-drag-data="obj" ng-drag-success="onDragCompleteInChar($data,$event)" class="item" src={{obj.title}} alt="">
+                        </div>
+                        <div class="row" id="size" ng-drop="true" ng-drop-success="onDropCompleteInScore($data,$event)">
+                            <img id="scoreHolder"  src="./assests/images/scoringrules.png" alt="image">
+                           <img id="droppedObjectsInScore" ng-repeat="obj in droppedObjectsInScore" ng-drag="true" ng-drag-data="obj" ng-drag-success="onDragCompleteInScore($data,$event)" class="item" src={{obj.title}} alt="">
+                        </div>
+                        <div class="row" id="size" ng-drop="true" ng-drop-success="onDropCompleteInBg($data,$event)">
+                            <img id="backgroundHolder"  src="./assests/images/containerbg.png" alt="bgimage">
+                            <img id="droppedObjectsInBg" ng-repeat="obj in droppedObjectsInBg" ng-drag="true" ng-drag-data="obj" ng-drag-success="onDragCompleteInBg($data,$event)" class="item" src={{obj.title}} alt="">
+                       </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <button id="previous_button" type="button" name="button">BACK</button>
+                    <button id="Next_button" type="button" name="button" ui-sref="chartypes">NEXT</button>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="row">
+                    <img id="speechBubble" src="./assests/images/chatbubble.png" alt=""></div>
+                <div class="row"><img id="giraffeimg" src="./assests/images/giraffe.png" alt="image"></div>
+            </div>
+        </div>
+</div>

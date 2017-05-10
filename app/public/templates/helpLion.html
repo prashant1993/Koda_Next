@@ -1,0 +1,27 @@
+<div class="img-responsive" style="background-image:url('./assests/images/junglePage2.jpg');  background-size:100% 100%; background-repeat:no-repeat; border:1px solid transparent; width:2000px; height:100vh;  margin-top:-22px;">
+<br>
+
+      <div  style="margin-left:5%; ">
+
+        <!-- <img ng-src="./assests/images/homepage3.png" id="lion-cave" alt="home page chat box"  ng-hide="show==1"/> -->
+        <div  ng-hide="show==1">
+          <img ng-src="./assests/images/chat_bubble.png" id="helpLionChat" class="chatBox" alt="home page chat box"  >
+          <p id="textInChat" class="textHelpLion">I'm so glad that you arrived. <br>Before I show you around, can <br> you do me a favour?</p>
+        </div>
+          <!-- <img ng-src="./assests/images/homepage4.png" id="lion-cave" alt="home page chat box" ng-show="show==1"/> -->
+          <div ng-show="show==1">
+              <img ng-src="./assests/images/chat_bubble.png" id="helpLionChat" class="chatBox" alt="home page chat box"  >
+            <p id="textInChat" class="textHelpLion">Come inside my den. <br> I will show you a short dance <br> performance that I am preparing <br> for the carnival.</p>
+          </div>
+
+      </div>
+
+        <img ng-src="./assests/images/lionMascot.png" style="width: 477px; height: 471px; position:fixed; left:5%; top:500px;" alt="Lion Image" />
+
+      <div class="row" style="margin-left:35%;">
+        <!-- <button id="back_button" style="bottom:15px; position:fixed; left:20px;" type="button" name="button" ui-sref="welcome">BACK</button> -->
+        <button id="next_button" style="bottom:15px;  left:800px; position:fixed;" type="button" name="button" ng-click="show = 1" ng-hide="show==1">YES</button>
+        <button id="next_button" style="bottom:15px;  left:800px; position:fixed;" type="button" name="button"  ng-show="show==1" ui-sref="learndance">ALRIGHT!</button>
+      </div>
+      <img class="progressPointer" src="./assests/images/progressPointer.png" ng-hide="show==1" alt="">
+    </div>

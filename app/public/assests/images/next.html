@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)http://1hvge2.axshare.com/#g=1&p=giraffe-selecting_characters&c=1 -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Giraffe-selecting characters</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link type="text/css" href="./next_files/reset.css" rel="Stylesheet">
+    <link type="text/css" href="./next_files/default.css" rel="Stylesheet">
+    <!--<link href='https://fonts.googleapis.com/css?family=Nunito:300' rel='stylesheet' type='text/css'>-->
+
+    <script type="text/javascript">
+        AXSHARE_HOST_URL = 'http://share.axure.com';
+        AXSHARE_HOST_SECURE_URL = 'https://share.axure.com';
+</script><script type="text/javascript">
+        if (location.href.toString().indexOf('file://localhost/') == 0) {
+            location.href = location.href.toString().replace('file://localhost/', 'file:///');
+        }
+    </script>
+
+    <!-- 8.0.0.3321 -->
+<script src="./next_files/jquery-1.7.1.min.js.download"></script>
+<script src="./next_files/startPre.js.download"></script>
+<script src="./next_files/document.js.download"></script>
+
+    <style type="text/css">
+
+#outerContainer {
+	width:1000px;
+	height:1500px;
+}
+
+.vsplitbar {
+    width: 3px;
+    /*background: #B9B9B9;*/
+    border-right: 1px solid #8f949a;
+}
+
+.vsplitbar:hover, .vsplitbar.active {
+    background: #8f949a;
+}
+
+#rightPanel {
+    background-color: White;
+}
+
+/*#leftPanel {
+    min-width: 120px;
+}*/
+
+.splitterMask {
+   position:absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+   background-image: url(resources/images/transparent.gif);
+   z-index: 20000;
+}
+
+    </style>
+    <script type="text/javascript" language="JavaScript"><!--
+        var SITEMAP_COLLAPSE_VAR_NAME = 'c';
+        var PLUGIN_VAR_NAME = 'g';
+        var FOOTNOTES_VAR_NAME = 'fn';
+        var ADAPTIVE_VIEW_VAR_NAME = 'view';
+        var lastLeftPanelWidth = 295;
+        var toolBarOnly = true;
+
+        // isolate scope
+        (function() {
+            setUpController();
+            
+            var configuration = $axure.document.configuration;
+            var _settings = {};
+            _settings.projectId = '1HVGE2';
+            _settings.isAxshare = configuration.isAxshare;
+            _settings.loadFeedbackPlugin = configuration.loadFeedbackPlugin;
+            var cHash = getHashStringVar(SITEMAP_COLLAPSE_VAR_NAME);
+            _settings.startCollapsed = cHash == "1";
+            if(cHash == "2") closePlayer();
+            var gHash = getHashStringVar(PLUGIN_VAR_NAME);
+            if(gHash == "") gHash = 1;
+            _settings.startPluginGid = gHash;
+
+            $axure.player.settings = _settings;
+
+            $(window).bind('load', function() {
+                if(CHROME_5_LOCAL && !$('body').attr('pluginDetected')) {
+                    window.location = 'resources/chrome/chrome.html';
+                }
+            });
+
+            $(document).ready(function() {
+                $axure.page.bind('load.start', mainFrame_onload);
+                $axure.messageCenter.addMessageListener(messageCenter_message);
+
+                $(document).on('pluginShown', function (event, data) {
+                    setVarInCurrentUrlHash('g', data ? data : '');
+                });
+
+                $(document).on('pluginCreated', function(event, data) {
+                    if($axure.player.settings.startPluginGid == data) {
+                        $axure.player.showPlugin(data);
+                    }
+                });
+
+                if($axure.player.settings.loadFeedbackPlugin) {
+                    if($axure.player.settings.isAxshare) {
+                        $axure.utils.loadJS('/Scripts/plugins/feedback/feedback8.js');
+                    } else {
+                        $axure.utils.loadJS('http://share.axure.com/Scripts/plugins/feedback/feedback8.js');
+                    }
+                }
+
+                if(navigator.userAgent.indexOf("MSIE") >= 0) $('#outerContainer').width('100%');
+                initialize();
+                if($axure.player.settings.startCollapsed) $('#outerContainer').splitter({ sizeLeft: 0 });
+                else $('#outerContainer').splitter({ sizeLeft: lastLeftPanelWidth });
+                $('#leftPanel').width(lastLeftPanelWidth);
+                
+                $(window).resize(function() { resizeContent(); });
+
+                $('#maximizePanelContainer').hide();
+
+                initializeLogo();
+
+                $(window).resize();
+                resizeContent();
+                
+                $axure.player.collapseToBar();
+
+                if($axure.player.settings.startCollapsed) {
+                    collapse();
+                    $('#leftPanel').width(0);
+                }
+
+                if(MOBILE_DEVICE) {
+                    $('#interfaceControlFrameMinimizeContainer').height('45px');
+                    $('#interfaceControlFrameMinimizeContainer a').height('45px');
+                    $('#interfaceControlFrameHeaderContainer').css('margin-top','45px');
+                    $('#interfaceControlFrameCloseContainer a').css('padding','10px 0px');
+                    $('#maximizePanelContainer').height('45px');//.css('top','inherit').css('bottom','0px');
+
+                    $('body').removeClass('hashover');
+
+                    if(IOS) {
+                        $('#rightPanel').css('overflow', 'auto').css('-webkit-overflow-scrolling', 'touch').css('-ms-overflow-x', 'hidden');
+
+                        window.addEventListener("orientationchange", function() {
+                            var viewport = document.querySelector("meta[name=viewport]");
+                            //so iOS doesn't zoom when switching back to portrait
+                            viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0');
+                            viewport.setAttribute('content', 'width=device-width, initial-scale=1.0');
+                            resizeContent();
+                        }, false);
+
+                        $axure.page.bind('load.start', function() {
+                            resizeContent();
+                        });
+                    }
+                }
+
+            });
+
+            function initialize() {
+                var legacyQString = getQueryString("Page");
+                if (legacyQString.length > 0) {
+                    location.href = location.href.substring(0, location.href.indexOf("?")) + "#p=" + legacyQString;
+                    return;
+                }
+
+                var mainFrame = document.getElementById("mainFrame");
+                mainFrame.contentWindow.location.href = getInitialUrl();
+            }
+
+            function initializeLogo() {
+                if($axure.document.configuration.logoImagePath) {
+                    var image = new Image();
+                    image.onload = function() {
+                        $('#logoImage').css('max-width', this.width + 'px');
+                        $axure.player.resizeContent();
+                    };
+                    image.src = $axure.document.configuration.logoImagePath;
+                
+                    $('#interfaceControlFrameLogoImageContainer').html('<img id="logoImage" src="" />');
+                    $('#logoImage').attr('src', $axure.document.configuration.logoImagePath).load(function() { resizeContent(); });
+                } else $('#interfaceControlFrameLogoImageContainer').hide();
+
+                if ($axure.document.configuration.logoImageCaption) {
+                    $('#interfaceControlFrameLogoCaptionContainer').html($axure.document.configuration.logoImageCaption);
+                } else $('#interfaceControlFrameLogoCaptionContainer').hide();
+
+                if(!$('#interfaceControlFrameLogoImageContainer').is(':visible') && !$('#interfaceControlFrameLogoCaptionContainer').is(':visible')) {
+                    $('#interfaceControlFrameLogoContainer').hide();
+                }
+            }
+
+            var resizeContent = $axure.player.resizeContent = function() {
+                var newHeight = $(window).height();
+                var newWidth = $(window).width();
+
+                var controlContainerHeight = newHeight;// - 30;
+                if($('#interfaceControlFrameLogoContainer').is(':visible')) controlContainerHeight -= $('#interfaceControlFrameLogoContainer').outerHeight();// + 16;
+
+                $('#outerContainer').height(newHeight).width(newWidth);
+                $('.vsplitbar').height(newHeight);
+                $('#leftPanel').height(newHeight);
+                $('#interfaceControlFrame').height(newHeight);
+                $('#interfaceControlFrameContainer').height(newHeight);
+                $('#interfaceControlFrameHostContainer').height(controlContainerHeight);
+
+                $('#rightPanel').height(newHeight);
+                $('#mainFrame').height(newHeight);
+
+                if($('#leftPanel').is(':visible')) $('#rightPanel').width($(window).width() - $('#leftPanel').width() - 1);// $('.vsplitbar').width());
+                else $('#rightPanel').width($(window).width());
+
+                $(document).trigger('ContainerHeightChange',[controlContainerHeight]);
+
+                if(MOBILE_DEVICE) {
+                    if(!(getHashStringVar(ADAPTIVE_VIEW_VAR_NAME).length > 0)) $axure.messageCenter.postMessage('setAdaptiveViewForSize', {'width':newWidth, 'height':$('#rightPanel').height()});
+                }
+            }
+
+            var collapseToBar = $axure.player.collapseToBar = function() {
+                lastLeftPanelWidth = $('#leftPanel').width();
+                $('#leftPanel').width('55px');
+                $('.vsplitbar').hide();
+                $('#rightPanel').width($(window).width() - $('#leftPanel').width());
+                $(window).resize();
+                $('#outerContainer').trigger('resize');
+                toolBarOnly = true;
+            }
+
+            var expandFromBar = $axure.player.expandFromBar = function() {
+                if($('.vsplitbar').is(':visible')) return;
+
+                $('#leftPanel').width(lastLeftPanelWidth);
+                $('.vsplitbar').show();
+                $('#rightPanel').width($(window).width() - $('#leftPanel').width() - 1);// $('.vsplitbar').width());
+                $(window).resize();
+                $('#outerContainer').trigger('resize');
+                toolBarOnly = false;
+            }
+
+        })();
+
+        function messageCenter_message(message, data) {
+            if(message == 'expandFrame') expand();
+            else if(message == 'getCollapseFrameOnLoad' && $axure.player.settings.startCollapsed && !MOBILE_DEVICE) $axure.messageCenter.postMessage('collapseFrameOnLoad');
+        }
+
+        
+        function getInitialUrl() {
+            var pageName = getHashStringVar("p");
+            if(pageName.length > 0) return pageName + ".html";
+            else {
+                var url = getFirstPageUrl($axure.document.sitemap.rootNodes);
+                return (url ? url : "about:blank");
+            }
+        }
+
+        function getFirstPageUrl(nodes) {
+            for (var i = 0; i < nodes.length; i++) {
+                var node = nodes[i];
+                if (node.url) return node.url;
+                else {
+                    var hasChildren = (node.children && node.children.length > 0);
+                    if (hasChildren) {
+                        var url = getFirstPageUrl(node.children);
+                        if (url) return url;
+                    }
+                }
+            }
+            return null;
+        }
+
+        function closePlayer() {
+            if($axure.page.location) window.location.href = $axure.page.location;
+            else {
+                var pageFile = getInitialUrl();
+                var currentLocation = window.location.toString();
+                window.location.href = currentLocation.substr(0, currentLocation.lastIndexOf("/") + 1) + pageFile;
+            }
+        }
+
+        function replaceHash(newHash) {
+            var currentLocWithoutHash = window.location.toString().split('#')[0];
+
+            //We use replace so that every hash change doesn't get appended to the history stack.
+            //We use replaceState in browsers that support it, else replace the location
+            if(typeof window.history.replaceState != 'undefined') {
+                try {
+                    //Chrome 45 (Version 45.0.2454.85 m) started throwing an error here when generated locally (this only happens with sitemap open) which broke all interactions.
+                    //try catch breaks the url adjusting nicely when the sitemap is open, but all interactions and forward and back buttons work.
+                    //Uncaught SecurityError: Failed to execute 'replaceState' on 'History': A history state object with URL 'file:///C:/Users/Ian/Documents/Axure/HTML/Untitled/start.html#p=home' cannot be created in a document with origin 'null'.
+                    window.history.replaceState(null, null, currentLocWithoutHash + newHash);
+                } catch(ex) {}
+            } else {
+                window.location.replace(currentLocWithoutHash + newHash);
+            }
+        }
+
+        function collapse() {
+            setVarInCurrentUrlHash('c', 1);
+            if(!toolBarOnly) lastLeftPanelWidth = $('#leftPanel').width();
+
+            $('#maximizePanelContainer').show();
+            $('#leftPanel').hide();
+            $('.vsplitbar').hide();
+            $('#rightPanel').width($(window).width());
+            $(window).resize();
+            $('#outerContainer').trigger('resize');
+
+            $(document).trigger('sidebarCollapse');
+
+            if(MOBILE_DEVICE) {
+                $('#maximizePanelContainer').animate({
+                    top:$('#rightPanel').height() - $('#maximizePanelContainer').height()
+                }, 300, 'swing', function() {
+                    $('#maximizePanelContainer').css('top', 'inherit').css('bottom', '0px');
+                });
+            }
+        }
+
+        function expand() {
+            if(MOBILE_DEVICE) {
+                $('#maximizePanelContainer').css('top', '0px').css('bottom', 'inherit');
+            }
+
+            deleteVarFromCurrentUrlHash('c');
+            $('#maximizePanelContainer').hide();
+            $('#leftPanel').width(lastLeftPanelWidth);
+            $('#leftPanel').show();
+            if(!toolBarOnly) {
+                $('.vsplitbar').show();
+                $('#rightPanel').width($(window).width() - $('#leftPanel').width() - 1);
+            } else {
+                $axure.player.collapseToBar();
+            }
+            $(window).resize();
+            $('#outerContainer').trigger('resize');
+
+            $(document).trigger('sidebarExpanded');
+        }
+
+
+        function mainFrame_onload() {
+            if($axure.page.pageName) document.title = $axure.page.pageName;
+        }
+
+        function getQueryString(query) {
+            var qstring = self.location.href.split("?");
+            if(qstring.length < 2) return "";
+            return GetParameter(qstring, query);
+        }
+        
+        function GetParameter(qstring, query) {
+            var prms = qstring[1].split("&");
+            var frmelements = new Array();
+            var currprmeter, querystr = "";
+
+            for(var i = 0; i < prms.length; i++) {
+                currprmeter = prms[i].split("=");
+                frmelements[i] = new Array();
+                frmelements[i][0] = currprmeter[0];
+                frmelements[i][1] = currprmeter[1];
+            }
+
+            for(j = 0; j < frmelements.length; j++) {
+                if(frmelements[j][0].toLowerCase() == query.toLowerCase()) {
+                    querystr = frmelements[j][1];
+                    break;
+                }
+            }
+            return querystr;
+        }
+        
+        function getHashStringVar(query) {
+            var qstring = self.location.href.split("#");
+            if(qstring.length < 2) return "";
+            return GetParameter(qstring, query);
+        }
+
+        function setHashStringVar(currentHash, varName, varVal) {
+            var varWithEqual = varName + '=';
+            var poundVarWithEqual = varVal === '' ? '' :  '#' + varName + '=' + varVal;
+            var ampVarWithEqual = varVal === '' ? '' :  '&' + varName + '=' + varVal;
+            var hashToSet = '';
+
+            var pageIndex = currentHash.indexOf('#' + varWithEqual);
+            if(pageIndex == -1) pageIndex = currentHash.indexOf('&' + varWithEqual);
+            if(pageIndex != -1) {
+                var newHash = currentHash.substring(0, pageIndex);
+
+                newHash = newHash == '' ? poundVarWithEqual : newHash + ampVarWithEqual;
+
+                var ampIndex = currentHash.indexOf('&', pageIndex + 1);
+                if(ampIndex != -1) {
+                    newHash = newHash == '' ? '#' + currentHash.substring(ampIndex + 1) : newHash + currentHash.substring(ampIndex);
+                }
+                hashToSet = newHash;
+            } else if(currentHash.indexOf('#') != -1) {
+                hashToSet = currentHash + ampVarWithEqual;
+            } else {
+                hashToSet = poundVarWithEqual;
+            }
+
+            if(hashToSet != '' || varVal == '') {
+                return hashToSet;
+            }
+
+            return null;
+        }
+
+        function setVarInCurrentUrlHash(varName, varVal) {
+            var newHash = setHashStringVar(window.location.hash, varName, varVal);
+
+            if(newHash != null) {
+                replaceHash(newHash);
+            }
+        }
+
+        function deleteHashStringVar(currentHash, varName) {
+            var varWithEqual = varName + '=';
+
+            var pageIndex = currentHash.indexOf('#' + varWithEqual);
+            if(pageIndex == -1) pageIndex = currentHash.indexOf('&' + varWithEqual);
+            if(pageIndex != -1) {
+                var newHash = currentHash.substring(0, pageIndex);
+
+                var ampIndex = currentHash.indexOf('&', pageIndex + 1);
+
+                //IF begin of string....if none blank, ELSE # instead of & and rest
+                //IF in string....prefix + if none blank, ELSE &-rest
+                if(newHash == '') { //beginning of string
+                    newHash = ampIndex != -1 ? '#' + currentHash.substring(ampIndex + 1) : '';
+                } else { //somewhere in the middle
+                    newHash = newHash + (ampIndex != -1 ? currentHash.substring(ampIndex) : '');
+                }
+
+                return newHash;
+            }
+
+            return null;
+        }
+
+        function deleteVarFromCurrentUrlHash(varName) {
+            var newHash = deleteHashStringVar(window.location.hash, varName);
+
+            if(newHash != null) {
+                replaceHash(newHash);
+            }
+        }
+    --></script>
+    
+    <link type="text/css" rel="Stylesheet" href="./next_files/sitemap.css">
+    <link type="text/css" rel="Stylesheet" href="./next_files/page_notes.css">
+    <link type="text/css" rel="Stylesheet" href="./next_files/debug.css">
+    <script src="./next_files/startPost.js.download"></script>
+
+
+    <!--<link type="text/css" rel="Stylesheet" href="plugins/recordplay/styles/recordplay.css" />
+    <script type="text/javascript" src="plugins/recordplay/recordplay.js"></script>-->
+    
+
+<link rel="stylesheet" type="text/css" href="./next_files/feedback8.css"><link rel="stylesheet" type="text/css" href="./next_files/axImgAreaSelect.css"></head>
+<body scroll="no" class="hashover">
+    <div id="outerContainer" style="position: relative; height: 925px; width: 1920px;">
+
+        <div id="leftPanel" style="position: absolute; z-index: 1; left: 0px; width: 0px; height: 925px; display: none;">
+            <div id="interfaceControlFrame" style="height: 925px;">
+                <div id="interfaceControlFrameMinimizeContainer">
+                    <a title="Collapse" id="interfaceControlFrameMinimizeButton" onclick="collapse();">&nbsp;</a>
+                </div>
+                <div id="interfaceControlFrameHeaderContainer">
+                    <ul id="interfaceControlFrameHeader"><li id="sitemapHostBtn"><a pluginid="sitemapHost" class="selected">PAGES</a></li><li id="pageNotesHostBtn"><a pluginid="pageNotesHost">NOTES</a></li><li id="feedbackHostBtn"><a pluginid="feedbackHost">DISCUSS</a></li><li id="debugHostBtn"><a pluginid="debugHost">CONSOLE</a></li></ul>
+                </div>
+                <div id="interfaceControlFrameContainer" style="height: 925px;">
+                    <div id="interfaceControlFrameLogoContainer" style="display: none;">
+                        <div id="interfaceControlFrameLogoImageContainer" style="display: none;"></div>
+                        <div id="interfaceControlFrameLogoCaptionContainer" style="display: none;"></div>
+                    </div>
+                    <div id="interfaceControlFrameHostContainer" style="height: 925px;">
+                    <div id="sitemapHost" style="display: block;"><div id="sitemapHeader" '="" class="sitemapHeader"><div id="sitemapToolbar" class="sitemapToolbar"><div class="pluginNameHeader">PAGES</div><div class="pageNameHeader" style="padding-right: 55px;">Giraffe-selecting characters</div><div class="pageButtonHeader"><a id="linksButton" title="Get Links" class="sitemapToolbarButton"></a><a id="highlightInteractiveButton" title="Highlight interactive elements" class="sitemapToolbarButton"></a></div></div><div id="sitemapLinksContainer" class="sitemapLinkContainer" style="display: none;"><div style="margin-bottom:10px;">Generate sharable URLs</div><input id="sitemapLinkWithPlayer" type="text" class="sitemapLinkField"><div class="sitemapOptionContainer"><div><label><input type="radio" name="sitemapToggle" value="withoutmap">Without Sidebar</label></div><div style="margin-top:10px;"><label><input type="radio" name="sitemapToggle" value="withmap">With Sidebar</label><div id="sitemapOptionsDiv" style="display: none;"><div class="sitemapUrlOption"><label><input type="checkbox" id="minimizeBox" disabled="disabled">Minimize sidebar</label></div><div class="sitemapUrlOption"><label><input type="checkbox" id="collapseBox" disabled="disabled">Pages closed</label></div><div class="sitemapUrlOption"><label><input type="checkbox" id="footnotesBox" disabled="disabled">Hide footnotes</label></div><div class="sitemapUrlOption"><label><input type="checkbox" id="highlightBox" disabled="disabled">Highlight interactive elements</label></div></div></div></div></div></div><div id="sitemapTreeContainer" style="height: 72px;"><div id="searchDiv" style=""><input id="searchBox" style="" type="text" class="searchBoxHint"></div><ul class="sitemapTree" style="clear:both;"><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:21px"><a class="sitemapPageLink" nodeurl="sitemap.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Sitemap</span></a></div></div></li><li class="sitemapNode sitemapExpandableNode"><div><div class="sitemapPageLinkContainer" style="margin-left:9px"><a class="sitemapPlusMinusLink"><span class="sitemapMinus"></span></a><a class="sitemapPageLink" nodeurl="home.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">HOME</span></a></div></div><ul><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:38px"><a class="sitemapPageLink" nodeurl="create_account.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Create Account</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:38px"><a class="sitemapPageLink" nodeurl="log_in.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Log In</span></a></div></div></li><li class="sitemapNode sitemapExpandableNode"><div><div class="sitemapPageLinkContainer" style="margin-left:26px"><a class="sitemapPlusMinusLink"><span class="sitemapMinus"></span></a><span class="sitemapPageIcon sitemapFolderIcon"></span><span class="sitemapPageName">Dashboard</span></div></div><ul><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:55px"><a class="sitemapPageLink" nodeurl="dashboard_-_giraffe_s_teachings.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Dashboard - Giraffe's Teachings</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:55px"><a class="sitemapPageLink" nodeurl="dashboard_-_existing_user.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Dashboard - existing user</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:55px"><a class="sitemapPageLink" nodeurl="dashboard_-_dancing_lion.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Dashboard - Dancing Lion</span></a></div></div></li></ul></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:38px"><a class="sitemapPageLink" nodeurl="welcome_to_the_show.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Welcome to the show</span></a></div></div></li><li class="sitemapNode sitemapExpandableNode"><div><div class="sitemapPageLinkContainer" style="margin-left:26px"><a class="sitemapPlusMinusLink"><span class="sitemapMinus"></span></a><a class="sitemapPageLink" nodeurl="help_the_lion.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Help the Lion</span></a></div></div><ul><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:55px"><a class="sitemapPageLink" nodeurl="lion_s_dance_-_goal.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Lion's Dance - Goal</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:55px"><a class="sitemapPageLink" nodeurl="flipbook_example.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Flipbook example</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:55px"><a class="sitemapPageLink" nodeurl="rearrange_dance_moves.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Rearrange dance moves</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:55px"><a class="sitemapPageLink" nodeurl="rearrange_dance_moves_p.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Rearrange dance moves P</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:55px"><a class="sitemapPageLink" nodeurl="thank_you-lion.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Thank You-Lion</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:55px"><a class="sitemapPageLink" nodeurl="thank_you-lion_p.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Thank You-Lion P</span></a></div></div></li></ul></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:38px"><a class="sitemapPageLink" nodeurl="building_blocks_of_a_game.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Building Blocks of a game</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:38px"><a class="sitemapPageLink" nodeurl="building_blocks_of_a_game_-bhadra.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Building Blocks of a game -Bhadra</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:38px"><a class="sitemapPageLink" nodeurl="giraffe-game.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Giraffe-game</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div class="sitemapHighlight"><div class="sitemapPageLinkContainer" style="margin-left:38px"><a class="sitemapPageLink" nodeurl="giraffe-selecting_characters.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Giraffe-selecting characters</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:38px"><a class="sitemapPageLink" nodeurl="giraffe-_types_of_characters.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Giraffe- Types of characters</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:38px"><a class="sitemapPageLink" nodeurl="giraffe-_algorithm.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Giraffe- Algorithm</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:38px"><a class="sitemapPageLink" nodeurl="thank_you_giraffe.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Thank you giraffe</span></a></div></div></li><li class="sitemapNode sitemapExpandableNode"><div><div class="sitemapPageLinkContainer" style="margin-left:26px"><a class="sitemapPlusMinusLink"><span class="sitemapMinus"></span></a><a class="sitemapPageLink" nodeurl="explore.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Explore</span></a></div></div><ul><li class="sitemapNode sitemapExpandableNode"><div><div class="sitemapPageLinkContainer" style="margin-left:43px"><a class="sitemapPlusMinusLink"><span class="sitemapMinus"></span></a><a class="sitemapPageLink" nodeurl="fruit_catcher.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fruit Catcher</span></a></div></div><ul><li class="sitemapNode sitemapExpandableNode"><div><div class="sitemapPageLinkContainer" style="margin-left:60px"><a class="sitemapPlusMinusLink"><span class="sitemapMinus"></span></a><a class="sitemapPageLink" nodeurl="fruit_catcher-l0.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fruit Catcher-L0</span></a></div></div><ul><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:89px"><a class="sitemapPageLink" nodeurl="fruit_catcher-start_coding.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fruit Catcher-Start Coding</span></a></div></div></li></ul></li><li class="sitemapNode sitemapExpandableNode"><div><div class="sitemapPageLinkContainer" style="margin-left:60px"><a class="sitemapPlusMinusLink"><span class="sitemapMinus"></span></a><a class="sitemapPageLink" nodeurl="fruit_catcher-_l1.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fruit catcher- L1</span></a></div></div><ul><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:89px"><a class="sitemapPageLink" nodeurl="fruit_catcher-_positioning_characters.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fruit Catcher- Positioning characters</span></a></div></div></li></ul></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:72px"><a class="sitemapPageLink" nodeurl="fruit_catcher-l1-old.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fruit Catcher-L1-old</span></a></div></div></li><li class="sitemapNode sitemapExpandableNode"><div><div class="sitemapPageLinkContainer" style="margin-left:60px"><a class="sitemapPlusMinusLink"><span class="sitemapMinus"></span></a><a class="sitemapPageLink" nodeurl="fruit_catcher-l2.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fruit Catcher-L2</span></a></div></div><ul><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:89px"><a class="sitemapPageLink" nodeurl="fruit_catcher-monkey_s_pose.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fruit Catcher-Monkey's pose</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:89px"><a class="sitemapPageLink" nodeurl="fruit_catcher-monkey_s_pose-flipbook_preview.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fruit Catcher-Monkey's pose-Flipbook Preview</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:89px"><a class="sitemapPageLink" nodeurl="fruit_catcher-_introducing_blocks.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fruit Catcher- Introducing Blocks</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:89px"><a class="sitemapPageLink" nodeurl="fruit_catcher_-_switch_monkey_pose__1_.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fruit Catcher - Switch Monkey Pose (1)</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:89px"><a class="sitemapPageLink" nodeurl="fruit_catcher_-_fruit_fall.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fruit Catcher - Fruit Fall</span></a></div></div></li></ul></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:72px"><a class="sitemapPageLink" nodeurl="fruit_catcher-_positioning_characters_-check__1_.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fruit Catcher- Positioning characters -CHECK (1)</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:72px"><a class="sitemapPageLink" nodeurl="fruit_catcher_-_move_hat-_1_-before_events.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fruit Catcher - Move Hat-(1)-Before Events</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:72px"><a class="sitemapPageLink" nodeurl="fruit_catcher_-_move_hat-_events.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fruit Catcher - Move Hat- Events</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:72px"><a class="sitemapPageLink" nodeurl="fruit_catcher_-_move_hat-_2_-after_events.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fruit Catcher - Move Hat-(2)-After Events</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:72px"><a class="sitemapPageLink" nodeurl="fruit_catcher_-_score-catch_fruit.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fruit Catcher - Score-Catch Fruit</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:72px"><a class="sitemapPageLink" nodeurl="fruit_catcher_-_repeat_fruit_fall.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fruit Catcher - Repeat Fruit Fall</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:72px"><a class="sitemapPageLink" nodeurl="fruit_catcher-l3.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fruit Catcher-L3</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:72px"><a class="sitemapPageLink" nodeurl="fruit_catcher-l4.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fruit Catcher-L4</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:72px"><a class="sitemapPageLink" nodeurl="fruit_catcher-l5.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fruit Catcher-L5</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:72px"><a class="sitemapPageLink" nodeurl="fruit_catcher-l6.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fruit Catcher-L6</span></a></div></div></li></ul></li><li class="sitemapNode sitemapExpandableNode"><div><div class="sitemapPageLinkContainer" style="margin-left:43px"><a class="sitemapPlusMinusLink"><span class="sitemapMinus"></span></a><a class="sitemapPageLink" nodeurl="fly_catcher.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fly Catcher</span></a></div></div><ul><li class="sitemapNode sitemapExpandableNode"><div><div class="sitemapPageLinkContainer" style="margin-left:60px"><a class="sitemapPlusMinusLink"><span class="sitemapMinus"></span></a><a class="sitemapPageLink" nodeurl="fly_catcher_-_l0.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fly catcher - L0</span></a></div></div><ul><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:89px"><a class="sitemapPageLink" nodeurl="fly_catcher-start_coding.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fly catcher-Start coding</span></a></div></div></li></ul></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:72px"><a class="sitemapPageLink" nodeurl="fly_catcher-_l1.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fly catcher- L1</span></a></div></div></li><li class="sitemapNode sitemapExpandableNode"><div><div class="sitemapPageLinkContainer" style="margin-left:60px"><a class="sitemapPlusMinusLink"><span class="sitemapMinus"></span></a><a class="sitemapPageLink" nodeurl="fly_catcher-_l2.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fly catcher- L2</span></a></div></div><ul><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:89px"><a class="sitemapPageLink" nodeurl="fly_catcher_-_frog_aiming_at_the_fly.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fly catcher - Frog aiming at the fly</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:89px"><a class="sitemapPageLink" nodeurl="fly_catcher_-_finding_fly_s_position-learning.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fly catcher - Finding fly's position-learning</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:89px"><a class="sitemapPageLink" nodeurl="fly_catcher_-_coordinates_concept.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fly catcher - Coordinates concept</span></a></div></div></li></ul></li><li class="sitemapNode sitemapExpandableNode"><div><div class="sitemapPageLinkContainer" style="margin-left:60px"><a class="sitemapPlusMinusLink"><span class="sitemapMinus"></span></a><a class="sitemapPageLink" nodeurl="fly_catcher-_l3.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fly catcher- L3</span></a></div></div><ul><li class="sitemapNode sitemapExpandableNode"><div><div class="sitemapPageLinkContainer" style="margin-left:77px"><a class="sitemapPlusMinusLink"><span class="sitemapMinus"></span></a><a class="sitemapPageLink" nodeurl="fly_catcher-_frog_catching_fly-_quizzie.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fly catcher- Frog catching fly- Quizzie</span></a></div></div><ul><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:106px"><a class="sitemapPageLink" nodeurl="fly_catcher_-start_and_end_position-quizzie.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fly catcher -Start and End position-Quizzie</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:106px"><a class="sitemapPageLink" nodeurl="fly_catcher-_blocks_intro.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fly catcher- Blocks Intro</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:106px"><a class="sitemapPageLink" nodeurl="fly_catcher_-_frog_catching_the_fly-_draw_block.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fly catcher - Frog catching the fly- Draw block</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:106px"><a class="sitemapPageLink" nodeurl="fly_catcher_-_draw_block-thickness.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fly catcher - Draw block-Thickness</span></a></div></div></li></ul></li><li class="sitemapNode sitemapExpandableNode"><div><div class="sitemapPageLinkContainer" style="margin-left:77px"><a class="sitemapPlusMinusLink"><span class="sitemapMinus"></span></a><a class="sitemapPageLink" nodeurl="fly_catcher_-_events-_trial_play.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fly catcher - Events- Trial play</span></a></div></div><ul><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:106px"><a class="sitemapPageLink" nodeurl="fly_catcher_-_events_-_learning.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fly catcher - Events - Learning</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:106px"><a class="sitemapPageLink" nodeurl="fly_catcher_-_events-_controlled_character.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fly catcher - Events- controlled character</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:106px"><a class="sitemapPageLink" nodeurl="fly_catcher_-_events_-learning1.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fly catcher - Events -learning1</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:106px"><a class="sitemapPageLink" nodeurl="fly_catcher_-_events_activity.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fly catcher - Events activity</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:106px"><a class="sitemapPageLink" nodeurl="fly_catcher_-_events_-_2.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fly catcher - Events - 2</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:106px"><a class="sitemapPageLink" nodeurl="fly_catcher-_events-_implementation.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fly catcher- Events- Implementation</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:106px"><a class="sitemapPageLink" nodeurl="fly_catcher-_events-_trial_play.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fly catcher- Events- Trial play</span></a></div></div></li><li class="sitemapNode sitemapExpandableNode"><div><div class="sitemapPageLinkContainer" style="margin-left:94px"><a class="sitemapPlusMinusLink"><span class="sitemapMinus"></span></a><a class="sitemapPageLink" nodeurl="fly_catcher_-_level4.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fly catcher - Level4</span></a></div></div><ul><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:123px"><a class="sitemapPageLink" nodeurl="fly_catcher-_making_fly_disappear-quizzie.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fly catcher- Making fly disappear-Quizzie</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:123px"><a class="sitemapPageLink" nodeurl="fly_catcher_-_making_fly_disappear_hide_block.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fly catcher - Making fly disappear hide block</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:123px"><a class="sitemapPageLink" nodeurl="fly_catcher_-_making_fly_appear-_quizzie.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fly catcher - Making fly appear- Quizzie</span></a></div></div></li></ul></li></ul></li></ul></li><li class="sitemapNode sitemapExpandableNode"><div><div class="sitemapPageLinkContainer" style="margin-left:60px"><a class="sitemapPlusMinusLink"><span class="sitemapMinus"></span></a><a class="sitemapPageLink" nodeurl="fly_catcher_-_level_1_badge.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fly catcher - Level 1 Badge</span></a></div></div><ul><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:89px"><a class="sitemapPageLink" nodeurl="fly_catcher-_coordinates_using_mouse.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Fly catcher- Coordinates using mouse</span></a></div></div></li></ul></li></ul></li><li class="sitemapNode sitemapExpandableNode"><div><div class="sitemapPageLinkContainer" style="margin-left:43px"><a class="sitemapPlusMinusLink"><span class="sitemapMinus"></span></a><a class="sitemapPageLink" nodeurl="tortoise_race.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Tortoise Race</span></a></div></div><ul><li class="sitemapNode sitemapExpandableNode"><div><div class="sitemapPageLinkContainer" style="margin-left:60px"><a class="sitemapPlusMinusLink"><span class="sitemapMinus"></span></a><a class="sitemapPageLink" nodeurl="tortoise_race-_l0.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Tortoise Race- L0</span></a></div></div><ul><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:89px"><a class="sitemapPageLink" nodeurl="tortoise_race_start_coding.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Tortoise Race_Start Coding</span></a></div></div></li></ul></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:72px"><a class="sitemapPageLink" nodeurl="tortoise_race_l1.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Tortoise Race_L1</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:72px"><a class="sitemapPageLink" nodeurl="tortoise_selecting_characters.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Tortoise_Selecting characters</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:72px"><a class="sitemapPageLink" nodeurl="tortoise_positioning_characters.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Tortoise_Positioning characters</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:72px"><a class="sitemapPageLink" nodeurl="tortoise_checkpositioncharacter.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Tortoise_CheckPositionCharacter</span></a></div></div></li></ul></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:55px"><a class="sitemapPageLink" nodeurl="matching_birds-preview.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Matching birds-Preview</span></a></div></div></li><li class="sitemapNode sitemapLeafNode"><div><div class="sitemapPageLinkContainer" style="margin-left:55px"><a class="sitemapPageLink" nodeurl="snake_hangman-preview.html"><span class="sitemapPageIcon"></span><span class="sitemapPageName">Snake Hangman-Preview</span></a></div></div></li></ul></li></ul></li></ul></div></div><div id="pageNotesHost" style="display: none;"><div id="pageNotesHeader" '="" class="sitemapHeader"><div id="pageNotesToolbar" class="sitemapToolbar"><div class="pluginNameHeader">NOTES</div><div class="pageNameHeader">Giraffe-selecting characters</div><div class="pageButtonHeader"><a id="notesPreviousButton" title="Previous Page" class="sitemapToolbarButton prevPageButton"></a><a id="notesNextButton" title="Next Page" class="sitemapToolbarButton nextPageButton"></a><a id="footnotesButton" title="Toggle Footnotes" class="sitemapToolbarButton sitemapToolbarButtonSelected"></a></div></div></div><div id="pageNotesScrollContainer" style="height: 72px;"><div id="pageNotesContainer"><div id="pageNotesEmptyState" class="emptyStateContainer"><div class="emptyStateTitle">No notes for this page.</div><div class="emptyStateContent">Notes added in Axure RP will appear here.</div><div class="dottedDivider"></div></div><span id="pageNotesContent"></span></div></div></div><div id="debugHost" style="display: none;"><div id="debugHeader" '="" class="sitemapHeader"><div id="debugToolbar" class="sitemapToolbar"><div class="pluginNameHeader">CONSOLE</div><div class="pageNameHeader">Giraffe-selecting characters</div></div></div><div id="debugScrollContainer" style="height: 72px;"><div id="debugContainer"><div id="variablesContainer"><div id="variablesClearLinkContainer" class="debugLinksContainer"><a id="variablesClearLink" title="Reset Variables">Reset Variables</a></div><div id="variablesDiv"><div class="variableDiv"><span class="variableName">VAR1</span><br>(blank)</div></div></div><div class="dottedDivider"></div><div id="traceContainer"><div id="traceClearLinkContainer" class="debugLinksContainer" style="display: block;"><a id="traceClearLink" title="Clear Trace">Clear Trace</a></div><div id="traceEmptyState" class="emptyStateContainer" style="display: none;"><div class="emptyStateTitle">No interactions in the trace.</div><div class="emptyStateContent">Triggered interactions will appear here.</div><div class="dottedDivider"></div></div><div id="traceDiv"><div class="axEventBlock lastAxEvent"><div class="axTime">3:11:14 PM</div><div class="axLabel">Next Button (Rectangle)</div><div class="axEvent">OnClick</div><div class="axCase">Case 1<br> (If text on Speech Text equals "I really hope you enjoyed the game. If you think about it, every game has common elements-player controlled characters,uncontrolled characters, scoring rules and game over rules")</div><div class="axAction">Show (Group),<br>Tools Pane,<br>Placeholder_Activity</div><div class="axAction">Set text on Speech Text equal to "I would like to pack up and..."</div></div></div></div></div></div></div><div id="feedbackHost" style="display: none;"><div id="feedbackHeader" class="feedbackHeader"><div id="refreshFeedbackDiv"></div><div id="feedbackToolbar" class="feedbackToolbar"><div id="feedbackNameHeader" class="pluginNameHeader">DISCUSS</div><div id="feedbackPageNameHeader" class="pageNameHeader" title="Discuss Giraffe-selecting characters">Giraffe-selecting characters</div><div id="feedbackButtonHeader" class="pageButtonHeader"><a id="feedbackButtonBack" class="feedbackToolbarButton" title="Go to Previous Page" href="http://1hvge2.axshare.com/#"></a><a id="feedbackButtonForward" class="feedbackToolbarButton" title="Go to Next Page" href="http://1hvge2.axshare.com/#"></a><a id="feedbackButtonRefresh" class="feedbackToolbarButton staticRefreshButton" href="http://1hvge2.axshare.com/#"></a></div></div><div class="commenterSetNameDialog">    <form class="commenterRenameForm" action="http://1hvge2.axshare.com/">        <div>            You are currently commenting anonymously.<br><br>            Please enter a name or click <a href="http://1hvge2.axshare.com/#" class="commenterSetNameContinueAnon">Continue as Anonymous</a><br><br>            <div style="width: 100%;">               <input id="commenterSetNameTextBox" maxlength="25" type="text" title="Enter Name">               <input id="commenterSetNameSubmitButton" type="submit" value="OK">            </div>        </div>    </form></div><div id="commenterSetNameDialogOverlay" class="dialogOverlay" style="background: rgba(0, 0, 0, 0.6); display: none; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; z-index: 100; cursor: pointer;"></div></div><div id="feedbackNewIssueContainer"><div id="commenterRenameContainer" class="">    <span id="commentingAsSpan">Commenting as </span>    <a class="commenterRenameLink" href="http://1hvge2.axshare.com/"><span class="commenterName">Anonymous</span></a>    <div style="display: none;" class="speech commenterRenamePopup">        <form class="commenterRenameForm" style="display:inline;" action="http://1hvge2.axshare.com/">           <div class="renamePopupDiv">            Post comment as <input maxlength="25" type="text" id="renamePopupTextbox">            <input type="submit" id="renamePopupSubmit" value="OK">           </div>        </form>    </div></div><div id="feedbackNewIssue"><div id="feedbackTag_47461581140096536729747380715039115468930128620925651944437143344" class="feedbackEntryItem">   <div id="feedbackNewIssueEntry" class="feedbackEntryTextBoxContainer">       <input id="addTopicInput" type="text" maxlength="140" title="What&#39;s on your mind?" class="feedbackEntryTextBox watermark"><img class="screenshotIssueIcon" type="button" title="" onclick="screenshotTakeMainScreenshot(this)">   </div>   <div class="feedbackEntryItemLinks">       <a class="awesomeButton feedbackEntryItemSave">POST</a>   </div></div></div></div><div id="feedbackScrollContainer" style="height: 51px;"><div id="feedbackSavedIssues" class=""></div></div></div></div>
+                </div>
+                <div id="interfaceControlFrameCloseContainer">
+                    <a title="Close" id="interfaceControlFrameCloseButton" onclick="closePlayer();">CLOSE</a>
+                </div>
+            </div>
+        </div><div class="vsplitbar" unselectable="on" style="z-index: 100; position: absolute; user-select: none; top: 0px; cursor: col-resize; left: -3px; height: 925px; display: block;"><a href="javascript:void(0)" accesskey="" tabindex="0" title="vsplitbar"></a></div>
+        <div id="rightPanel" style="position: absolute; z-index: 1; left: 1px; width: 1920px; height: 925px;">
+            <iframe id="mainFrame" name="mainFrame" width="100%" height="100%" src="./next_files/saved_resource.html" frameborder="0" style="display: block; height: 925px;" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+        </div>
+
+    </div>
+
+    <div id="maximizePanelContainer" style="display: block;">
+        <iframe id="expandFrame" src="./next_files/expand.html" width="100%" height="100%" scrolling="no" allowtransparency="true" frameborder="0"></iframe>
+    </div>
+
+
+
+</body></html>

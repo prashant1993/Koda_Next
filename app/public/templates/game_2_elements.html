@@ -1,0 +1,77 @@
+<div id="mainRow" style="background-image:url('./assests/images/backimg.png'); ">
+  <nav class="navbar" style="background-color:rgba(207, 241, 14, 1); height:100px;">
+      <div class="navbarText">
+          <p style="font-family:Julee; font-weight:700; margin-top:30px; ">Treasure Hunt! Find the various elements of Monkey Menace based on the giraffe's instructions.</p>
+      </div>
+  </nav>
+    <div class="row" id="display">
+        <div class="col-lg-3 col-md-3 col-xs-3 col-sm-3">
+            <div class="gameElement">
+                <p id="gameElementHeading">Game Elements</p>
+                <div class="characterBox" style="margin-top:-5px;">
+                    <p id="charText">CHARACTERS</p>
+                    <div class="circle" id="capPosition"></div>
+                    <div class="circle" style="margin-left:18px;"></div>
+                    <div class="circle" style="margin-left:18px;"></div>
+                    <svg style="margin-left:152px; margin-top:-60px;" width="500" height="100"><line x1="100" y1="0" x2="125" y2="0" stroke="black"/></svg>
+                    <p id="textInBox" style="margin-top:-50px; margin-left:20px;">Player-controlled <br> Characters</p>
+                    <p id="textInBox" style="margin-top:-40px; margin-left:180px;">Uncontrollable Characters</p>
+                    <img src="./assests/images/cap.png" id="capPlaced" style="width: 100px; height: 66px; margin-top:-110px; margin-left:10px; display:none; position:fixed;" alt="">
+                    <img src="./assests/images/apple.png" id="applePlaced" style="margin-top:-130px; margin-left:150px; height:100px; width:100px; display:none; position:fixed;" alt="">
+                    <img src="./assests/images/monkey.png" id="monkeyPlaced" style="margin-top:-130px; margin-left:285px; height:80px; width:80px; display:none;  position:fixed;" alt="">
+                      <img src="./assests/images/jungleBG.png" id="bgPlaced" style="margin-top:68px; margin-left:138px; height:112px; width:112px; display:none; border-radius:55px; position:fixed;" alt="">
+                      <p class="ruleContainer" id="scoringRulePlaced" ng-show="isScoringRule">10 points for catching a fruit in the hat</p>
+                      <p class="ruleContainer" id="gameOverRulePlaced" ng-show="isgameOverRule" >5 fruits are smashed</p>
+                </div>
+                <div class="characterBox">
+                    <p id="charText">BACKGROUND</p>
+                    <div class="circleBg"></div>
+                </div>
+                <div class="characterBox">
+                    <p id="charText">RULES</p>
+                    <p id="textInBox" style=" margin-top:-5px; text-align:center;">Scoring Rules</p>
+                    <div class="ruleBox" style="margin-top: -5px;"></div>
+                    <div class="ruleBox"></div>
+                    <p id="textInBox" style="text-align:center;">Game Over Rules</p>
+                </div>
+            </div>
+        </div>
+        <div id="treasureHunt" class="col-lg-6 col-md-6 col-xs-6 col-sm-6" >
+            <div  ng-hide="isBg" >
+                <img class="bgforGame2" src="./assests/images/jungleBG.png" ng-click="moveBg()" alt="">
+                  <div  id="errorMsgBg" style="display:none;"><img src="./assests/images/error_bg.png"></div>
+                <img src="./assests/images/monkey.png" id="monkey" ng-click="moveMonkey()" style="margin-top:-1080px; margin-left:440px;" alt="">
+                <div  id="errorMsgMonkey" style="display:none;"><img src="./assests/images/error_monkey.png"></div>
+                <img src="./assests/images/apple.png" id="apple" ng-click="moveApple()" style="margin-top:-680px; margin-left:470px;" alt="">
+                <div  id="errorMsgApple" style="display:none;"><img src="./assests/images/error_apple.png"></div>
+                <img src="./assests/images/cap.png" id="cap" ng-click="moveCap()" style="width: 130px; height: 66px; margin-top:-240px; margin-left:580px;" alt="">
+                  <div  id="errorMsgCap" style="display:none;"><img src="./assests/images/error_cap.png"></div>
+            </div>
+            <div ng-show="isBg" id="rulesOfgame2element">
+              <div  id="errorMsgRule1" style="display:none;"><img src="./assests/images/error_rule1.png"></div>
+              <p class="ruleContainer"  id="gameOverRule" ng-click="gameOverRule()">5 fruits are smashed</p>
+              <div  id="errorMsgRule2"  style="display:none;"><img src="./assests/images/error_rule2.png" ></div>
+              <div  id="errorMsg2"  style="display:none;"><img src="./assests/images/error2_rule.png" ></div>
+              <p class="ruleContainer" ng-click="rule2()">Monkey has thrown 5 fruits</p>
+              <p class="ruleContainer" id="scoringRule" ng-click="scoringRule()">10 points for catching a fruit in the hat</p>
+              <div  id="errorMsgRule4" style="display:none;"><img src="./assests/images/error_rule4.png"></div>
+                <div  id="errorMsg4" style="display:none;"><img src="./assests/images/error4_rule.png"></div>
+              <p class="ruleContainer" ng-click="rule4()">10 points when monkey throws a fruit</p>
+              <div  id="errorMsgRule5" style="display:none;"><img src="./assests/images/error_rule5.png"></div>
+             <div  id="errorMsg5" style="display:none;"><img src="./assests/images/error5_rule.png"></div>
+              <p class="ruleContainer" ng-click="rule5()">No fruits are smashed</p>
+            </div>
+        </div>
+        <div  class="col-lg-3 col-md-3 col-xs-3 col-sm-3" style="margin-top:-10px; text-align:right; margin-left:-30px;" >
+            <div class="row"><img id="speechBubblechat" src="./assests/images/chat_game2elements.png" ng-hide="isCap" alt=""></div>
+            <div class="row"><img id="speechBubblechat" class="cap" src="./assests/images/chat_element2.png" ng-show="isCap"  alt=""></div>
+            <div class="row"><img id="speechBubblechat" class="chat_monkey" src="./assests/images/chat_element3.png" ng-show="isMonkey"  alt=""></div>
+            <div class="row"><img id="speechBubblechat" class="chat_bg" src="./assests/images/chat_element4.png" ng-show="isBg"  alt=""></div>
+            <div class="row"><img id="speechBubblechat" src="./assests/images/chat_element6.png" ng-show="isScoringRule"  alt=""></div>
+            <div class="row"><img id="giffimg" style="margin-top:-20px;" src="./assests/images/giraffe.png" alt="image"></div>
+        </div>
+
+    </div>
+    <button id="back_button" class="button" type="button" name="button" ui-sref="typesOfChar3" >BACK</button>
+    <button id="next_button" class="disabled" type="button" name="button" >NEXT</button>
+</div>

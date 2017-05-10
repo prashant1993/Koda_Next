@@ -1,0 +1,44 @@
+
+@font-face {
+    font-family: 'Axure Handwriting';
+    src: url('http://d2c0io3tra5oye.cloudfront.net/fonts/axurehandwriting-webfont.eot');
+    src: url('http://d2c0io3tra5oye.cloudfront.net/fonts/axurehandwriting-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://d2c0io3tra5oye.cloudfront.net/fonts/axurehandwriting-webfont.woff') format('woff'),
+         url('http://d2c0io3tra5oye.cloudfront.net/fonts/axurehandwriting-webfont.ttf') format('truetype'),
+         url('http://d2c0io3tra5oye.cloudfront.net/fonts/axurehandwriting-webfont.svg#Axure Handwriting') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Axure Handwriting';
+    src: url('http://d2c0io3tra5oye.cloudfront.net/fonts/axurehandwriting-bold-webfont.eot');
+    src: url('http://d2c0io3tra5oye.cloudfront.net/fonts/axurehandwriting-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://d2c0io3tra5oye.cloudfront.net/fonts/axurehandwriting-bold-webfont.woff') format('woff'),
+         url('http://d2c0io3tra5oye.cloudfront.net/fonts/axurehandwriting-bold-webfont.ttf') format('truetype'),
+         url('http://d2c0io3tra5oye.cloudfront.net/fonts/axurehandwriting-bold-webfont.svg#Axure Handwriting') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Axure Handwriting';
+    src: url('http://d2c0io3tra5oye.cloudfront.net/fonts/axurehandwriting-bolditalic-webfont.eot');
+    src: url('http://d2c0io3tra5oye.cloudfront.net/fonts/axurehandwriting-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://d2c0io3tra5oye.cloudfront.net/fonts/axurehandwriting-bolditalic-webfont.woff') format('woff'),
+         url('http://d2c0io3tra5oye.cloudfront.net/fonts/axurehandwriting-bolditalic-webfont.ttf') format('truetype'),
+         url('http://d2c0io3tra5oye.cloudfront.net/fonts/axurehandwriting-bolditalic-webfont.svg#Axure Handwriting') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Axure Handwriting';
+    src: url('http://d2c0io3tra5oye.cloudfront.net/fonts/axurehandwriting-italic-webfont.eot');
+    src: url('http://d2c0io3tra5oye.cloudfront.net/fonts/axurehandwriting-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://d2c0io3tra5oye.cloudfront.net/fonts/axurehandwriting-italic-webfont.woff') format('woff'),
+         url('http://d2c0io3tra5oye.cloudfront.net/fonts/axurehandwriting-italic-webfont.ttf') format('truetype'),
+         url('http://d2c0io3tra5oye.cloudfront.net/fonts/axurehandwriting-italic-webfont.svg#Axure Handwriting') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}

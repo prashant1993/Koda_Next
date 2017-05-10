@@ -1,0 +1,6 @@
+var headID = document.getElementsByTagName("head")[0];
+var cssNode = document.createElement('link');
+cssNode.type = 'text/css';
+cssNode.rel = 'stylesheet';
+cssNode.href = window.AXSHARE_HOST_URL + '/fontCss?family=Axure%20Handwriting:r,b,bi,i';
+headID.appendChild(cssNode);

@@ -1,0 +1,25 @@
+<div class="row" id="mainRow" style="background-image:url('./assests/images/lion_bg.png'); ">
+
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="height:100%; "></div>
+        <div class=" col-lg-6 col-md-6 col-sm-6 col-xs-6 text-center" style=" height:100%;">
+
+  <div class="col-lg-4">
+    <div id="refresh">
+      <img class="danceVideo"  src={{correctgifUrl}} ng-click= "reloaded()" style="display:none;" ></img>
+    </div>
+ </div>
+<div class="col-lg-4">
+  <img id="lionImg" class="movingLion" src="./assests/images/lion_mascot.png" alt="lion" />
+        </div>
+      </div>
+        <div class=" col-lg-3 col-md-3 col-sm-3 col-xs-3" style=" height:100%;">
+            <div class="row" id="rowforChat" style="display:none;"><img id="chat" src="./assests/images/chat_lion_dance_goal1.png" ng-hide="isclicked" alt="chat_dancinganimals" /></div>
+            <div class="row"  id="rowforChat"><img id="chat" src="./assests/images/learnDanceChat2.png" alt="chat_dancinganimals" ng-show="isclicked"/></div>
+            <!-- <div class="row" id="rowforLion"> <img id="lionImg" src="./assests/images/lion_mascot.png" alt="lion" /></div> -->
+        </div>
+
+
+        <button id="back_button" style=" display:none;" type="button" name="button" ui-sref="helpLion">BACK</button>
+        <button id="next_button" class="button" style=" display:none;" type="button" name="button" ng-click="isclicked = !isclicked" ng-hide="isclicked">NEXT</button>
+        <button id="next_button"  type="button" name="button" style="font-size:22px;" ng-click="isclicked = !isclicked" ng-show="isclicked" ui-sref="flipbook">OF COURSE!</button>
+</div>
