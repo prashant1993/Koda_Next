@@ -1,10 +1,11 @@
 var express = require('express');
 //
-var koda = require('../models/kodaSchema').koda;
+var koda = require('../models/kodatrySchema').koda;
 var morgan = require('morgan');
 var app = express();
 
 app.use(morgan('dev'));
+
 function commonMethod() {
 
 }
@@ -12,8 +13,9 @@ function commonMethod() {
 //
 //
 commonMethod.prototype.save = function(kodaData, cb) {
+    console.log(kodaData);
     var kodaObj = new koda(kodaData);
-    console.log("kodaObj",kodaData);
+    console.log("kodaObj",kodaObj);
     kodaObj.save(function(error, data) {
       // console.log(callback);
       if (error) {
@@ -55,7 +57,7 @@ commonMethod.prototype.save = function(kodaData, cb) {
 //
 
 //
-// commonMethod.prototype.findId = function(kodaData, cb) {
+// commonMethod.prototype.find = function(kodaData, cb) {
 //     var kodaObj = new koda(kodaData);
 //     kodaObj.findById(function(error, data) {
 //         if (error) {

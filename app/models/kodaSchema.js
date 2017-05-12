@@ -162,7 +162,10 @@ var kodaSchema = new BaseSchema({
      }],
      visit:{
        type:Number
-     },
+     }, timeSpend:{
+        type:Number,
+        default:0
+      },
      giraffeGuru:[{
        welcome:[{
          progress:{

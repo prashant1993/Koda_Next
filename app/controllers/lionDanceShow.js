@@ -3,7 +3,11 @@ var express = require('express'),
 
     //router.use("/welcomeUser",require('./welcomeUser'));
     router.use("/welcome",require('./welcome'));
+    router.use("/userProfile",require('./userProfile'));
+
     router.use("/helpLion",require('./helpLion'));
+    router.use("/helpLionupdate",require('./helpLionupdate'));
+
     // router.use("/learndance",require('./learndance'));
     // router.use("/flipbook",require('./flipbook'));
     // router.use("/stepShown",require('./stepShown'));
